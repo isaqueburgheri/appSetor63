@@ -1,18 +1,128 @@
 // Export pages
-export '/pages/menu/main_members/main_members_widget.dart'
-    show MainMembersWidget;
 export '/pages/main_dashboard/main_dashboard_widget.dart'
     show MainDashboardWidget;
-export '/pages/igrejas/setor63_01_sede/setor6301_sede_widget.dart'
+export '/pages/menu/igrejas/setor63_01_sede/setor6301_sede_widget.dart'
     show Setor6301SedeWidget;
-export '/pages/igrejas/setor_63_02_barro_branco/setor6302_barro_branco_widget.dart'
+export '/pages/menu/igrejas/setor_63_02_barro_branco/setor6302_barro_branco_widget.dart'
     show Setor6302BarroBrancoWidget;
-export '/pages/menu/main_0_menu/main0_menu_widget.dart' show Main0MenuWidget;
-export '/pages/menu/menu_radio/menu_radio_widget.dart' show MenuRadioWidget;
-export '/pages/menu/menu_biblia/menu_biblia_widget.dart' show MenuBibliaWidget;
-export '/pages/menu/menu_versiculos/menu_versiculos_widget.dart'
+export '/pages/main_0_menu/main0_menu_widget.dart' show Main0MenuWidget;
+export '/pages/menu/radio/menu_radio_01_rbc/menu_radio01_rbc_widget.dart'
+    show MenuRadio01RbcWidget;
+export '/pages/menu/biblia/menu_biblia/menu_biblia_widget.dart'
+    show MenuBibliaWidget;
+export '/pages/menu/biblia/menu_versiculos/menu_versiculos_widget.dart'
     show MenuVersiculosWidget;
-export '/pages/menu/menu_harpa/menu_harpa_widget.dart' show MenuHarpaWidget;
-export '/pages/menu/menu_pedir_oracao/menu_pedir_oracao_widget.dart'
+export '/pages/menu/harpa/menu_harpa/menu_harpa_widget.dart'
+    show MenuHarpaWidget;
+export '/pages/menu/pedidos/menu_pedir_oracao/menu_pedir_oracao_widget.dart'
     show MenuPedirOracaoWidget;
-export '/pages/menu/menu_doacao/menu_doacao_widget.dart' show MenuDoacaoWidget;
+export '/pages/menu/dizimos_ofertas/menu_doacao/menu_doacao_widget.dart'
+    show MenuDoacaoWidget;
+export '/pages/menu/radio/menu_radio/menu_radio_widget.dart'
+    show MenuRadioWidget;
+export '/pages/menu/radio/menu_radio_02_senami/menu_radio02_senami_widget.dart'
+    show MenuRadio02SenamiWidget;
+export '/pages/menu/radio/menu_radio_03_voz_m/menu_radio03_voz_m_widget.dart'
+    show MenuRadio03VozMWidget;
+export '/pages/menu/radio/menu_radio_04_fmmusical/menu_radio04_fmmusical_widget.dart'
+    show MenuRadio04FmmusicalWidget;
+export '/pages/menu/igrejas/setor_63_06_city_conceicao/setor6306_city_conceicao_widget.dart'
+    show Setor6306CityConceicaoWidget;
+export '/pages/menu/igrejas/setor_63_03_cachoeirada_sorte/setor6303_cachoeirada_sorte_widget.dart'
+    show Setor6303CachoeiradaSorteWidget;
+export '/pages/menu/igrejas/setor_63_04_castro_alves/setor6304_castro_alves_widget.dart'
+    show Setor6304CastroAlvesWidget;
+export '/pages/menu/igrejas/setor_63_07_cohab_etelvina/setor6307_cohab_etelvina_widget.dart'
+    show Setor6307CohabEtelvinaWidget;
+export '/pages/menu/igrejas/setor_63_08_conj_prestes_maia/setor6308_conj_prestes_maia_widget.dart'
+    show Setor6308ConjPrestesMaiaWidget;
+export '/pages/menu/igrejas/setor_63_09_fazendado_carmo/setor6309_fazendado_carmo_widget.dart'
+    show Setor6309FazendadoCarmoWidget;
+export '/pages/menu/igrejas/setor_63_10_ferreirada_rocha/setor6310_ferreirada_rocha_widget.dart'
+    show Setor6310FerreiradaRochaWidget;
+export '/pages/menu/igrejas/setor_63_11_inacio_monteiro/setor6311_inacio_monteiro_widget.dart'
+    show Setor6311InacioMonteiroWidget;
+export '/pages/menu/igrejas/setor_63_05_castro2/setor6305_castro2_widget.dart'
+    show Setor6305Castro2Widget;
+export '/pages/menu/midia/midias_sociais/y_01_culto_milagres/y01_culto_milagres_widget.dart'
+    show Y01CultoMilagresWidget;
+export '/pages/menu/midia/midias_sociais/y_02_culto_ceia/y02_culto_ceia_widget.dart'
+    show Y02CultoCeiaWidget;
+export '/pages/menu/midia/midias_sociais/y_03_familia/y03_familia_widget.dart'
+    show Y03FamiliaWidget;
+export '/pages/menu/midia/midias_sociais/y_04_ensino/y04_ensino_widget.dart'
+    show Y04EnsinoWidget;
+export '/pages/menu/midia/midia_menu/midia_menu_widget.dart'
+    show MidiaMenuWidget;
+export '/pages/menu/radio/menu_radio_05_a_d_b_p/menu_radio05_a_d_b_p_widget.dart'
+    show MenuRadio05ADBPWidget;
+export '/pages/menu/igrejas/igrejas_menu/igrejas_menu_widget.dart'
+    show IgrejasMenuWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_01_geral/novo_testamento01_geral_widget.dart'
+    show NovoTestamento01GeralWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_00/novo_testamento00_widget.dart'
+    show NovoTestamento00Widget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_02_mt/novo_testamento02_mt_widget.dart'
+    show NovoTestamento02MtWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_03_mt/novo_testamento03_mt_widget.dart'
+    show NovoTestamento03MtWidget;
+export '/pages/menu/midia/bible_project/biblie_project_menu/biblie_project_menu_widget.dart'
+    show BiblieProjectMenuWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_04_mc/novo_testamento04_mc_widget.dart'
+    show NovoTestamento04McWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_05_lc/novo_testamento05_lc_widget.dart'
+    show NovoTestamento05LcWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_06_lc/novo_testamento06_lc_widget.dart'
+    show NovoTestamento06LcWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_07_jo_02/novo_testamento07_jo02_widget.dart'
+    show NovoTestamento07Jo02Widget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_08_at/novo_testamento08_at_widget.dart'
+    show NovoTestamento08AtWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_09_at/novo_testamento09_at_widget.dart'
+    show NovoTestamento09AtWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_10_rm/novo_testamento10_rm_widget.dart'
+    show NovoTestamento10RmWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_11_rm/novo_testamento11_rm_widget.dart'
+    show NovoTestamento11RmWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_12_1_co/novo_testamento121_co_widget.dart'
+    show NovoTestamento121CoWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_13_2_co/novo_testamento132_co_widget.dart'
+    show NovoTestamento132CoWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_14_gl/novo_testamento14_gl_widget.dart'
+    show NovoTestamento14GlWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_15_ef/novo_testamento15_ef_widget.dart'
+    show NovoTestamento15EfWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_16_fp/novo_testamento16_fp_widget.dart'
+    show NovoTestamento16FpWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_17_cl/novo_testamento17_cl_widget.dart'
+    show NovoTestamento17ClWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_18_1_ts/novo_testamento181_ts_widget.dart'
+    show NovoTestamento181TsWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_19_2_ts/novo_testamento192_ts_widget.dart'
+    show NovoTestamento192TsWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_20_1_tm/novo_testamento201_tm_widget.dart'
+    show NovoTestamento201TmWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_21_2_tm/novo_testamento212_tm_widget.dart'
+    show NovoTestamento212TmWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_22_tt/novo_testamento22_tt_widget.dart'
+    show NovoTestamento22TtWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_23_fm/novo_testamento23_fm_widget.dart'
+    show NovoTestamento23FmWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_24_hb/novo_testamento24_hb_widget.dart'
+    show NovoTestamento24HbWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_25_tg/novo_testamento25_tg_widget.dart'
+    show NovoTestamento25TgWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_26_1_pe/novo_testamento261_pe_widget.dart'
+    show NovoTestamento261PeWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_27_2_pe/novo_testamento272_pe_widget.dart'
+    show NovoTestamento272PeWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_28_1_2_3_jo/novo_testamento28123_jo_widget.dart'
+    show NovoTestamento28123JoWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_29_jd/novo_testamento29_jd_widget.dart'
+    show NovoTestamento29JdWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_30_ap/novo_testamento30_ap_widget.dart'
+    show NovoTestamento30ApWidget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_07_jo_01/novo_testamento07_jo01_widget.dart'
+    show NovoTestamento07Jo01Widget;
+export '/pages/menu/midia/bible_project/novo_testamento/novo_testamento_31_ap02/novo_testamento31_ap02_widget.dart'
+    show NovoTestamento31Ap02Widget;

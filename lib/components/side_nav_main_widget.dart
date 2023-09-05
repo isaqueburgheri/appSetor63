@@ -267,78 +267,60 @@ class _SideNavMainWidgetState extends State<SideNavMainWidget> {
                 Padding(
                   padding:
                       EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 12.0),
-                  child: InkWell(
-                    splashColor: Colors.transparent,
-                    focusColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    onTap: () async {
-                      context.pushNamed(
-                        'main_Members',
-                        extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
-                            hasTransition: true,
-                            transitionType: PageTransitionType.fade,
-                            duration: Duration(milliseconds: 0),
-                          ),
-                        },
-                      );
-                    },
-                    child: Container(
-                      width: double.infinity,
-                      height: 50.0,
-                      decoration: BoxDecoration(
+                  child: Container(
+                    width: double.infinity,
+                    height: 50.0,
+                    decoration: BoxDecoration(
+                      color: widget.selectedNav == 3
+                          ? FlutterFlowTheme.of(context).accent1
+                          : FlutterFlowTheme.of(context).primary,
+                      borderRadius: BorderRadius.circular(12.0),
+                      shape: BoxShape.rectangle,
+                      border: Border.all(
                         color: widget.selectedNav == 3
                             ? FlutterFlowTheme.of(context).accent1
                             : FlutterFlowTheme.of(context).primary,
-                        borderRadius: BorderRadius.circular(12.0),
-                        shape: BoxShape.rectangle,
-                        border: Border.all(
-                          color: widget.selectedNav == 3
-                              ? FlutterFlowTheme.of(context).accent1
-                              : FlutterFlowTheme.of(context).primary,
-                        ),
                       ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            12.0, 0.0, 12.0, 0.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 12.0, 12.0, 12.0),
-                              child: Container(
-                                width: 4.0,
-                                height: 100.0,
-                                decoration: BoxDecoration(
-                                  color: widget.selectedNav == 3
-                                      ? FlutterFlowTheme.of(context).info
-                                      : FlutterFlowTheme.of(context).accent1,
-                                  borderRadius: BorderRadius.circular(12.0),
-                                ),
+                    ),
+                    child: Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 12.0, 12.0, 12.0),
+                            child: Container(
+                              width: 4.0,
+                              height: 100.0,
+                              decoration: BoxDecoration(
+                                color: widget.selectedNav == 3
+                                    ? FlutterFlowTheme.of(context).info
+                                    : FlutterFlowTheme.of(context).accent1,
+                                borderRadius: BorderRadius.circular(12.0),
                               ),
                             ),
-                            Icon(
-                              Icons.groups_sharp,
-                              color: FlutterFlowTheme.of(context).info,
-                              size: 28.0,
+                          ),
+                          Icon(
+                            Icons.groups_sharp,
+                            color: FlutterFlowTheme.of(context).info,
+                            size: 28.0,
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                12.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              'Members',
+                              style: FlutterFlowTheme.of(context)
+                                  .labelMedium
+                                  .override(
+                                    fontFamily: 'Plus Jakarta Sans',
+                                    color: FlutterFlowTheme.of(context).info,
+                                  ),
                             ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 0.0, 0.0, 0.0),
-                              child: Text(
-                                'Members',
-                                style: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .override(
-                                      fontFamily: 'Plus Jakarta Sans',
-                                      color: FlutterFlowTheme.of(context).info,
-                                    ),
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -346,78 +328,60 @@ class _SideNavMainWidgetState extends State<SideNavMainWidget> {
                 Padding(
                   padding:
                       EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 12.0),
-                  child: InkWell(
-                    splashColor: Colors.transparent,
-                    focusColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    onTap: () async {
-                      context.pushNamed(
-                        'main_Members',
-                        extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
-                            hasTransition: true,
-                            transitionType: PageTransitionType.fade,
-                            duration: Duration(milliseconds: 0),
-                          ),
-                        },
-                      );
-                    },
-                    child: Container(
-                      width: double.infinity,
-                      height: 50.0,
-                      decoration: BoxDecoration(
+                  child: Container(
+                    width: double.infinity,
+                    height: 50.0,
+                    decoration: BoxDecoration(
+                      color: widget.selectedNav == 3
+                          ? FlutterFlowTheme.of(context).accent1
+                          : FlutterFlowTheme.of(context).primary,
+                      borderRadius: BorderRadius.circular(12.0),
+                      shape: BoxShape.rectangle,
+                      border: Border.all(
                         color: widget.selectedNav == 3
                             ? FlutterFlowTheme.of(context).accent1
                             : FlutterFlowTheme.of(context).primary,
-                        borderRadius: BorderRadius.circular(12.0),
-                        shape: BoxShape.rectangle,
-                        border: Border.all(
-                          color: widget.selectedNav == 3
-                              ? FlutterFlowTheme.of(context).accent1
-                              : FlutterFlowTheme.of(context).primary,
-                        ),
                       ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            12.0, 0.0, 12.0, 0.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 12.0, 12.0, 12.0),
-                              child: Container(
-                                width: 4.0,
-                                height: 100.0,
-                                decoration: BoxDecoration(
-                                  color: widget.selectedNav == 3
-                                      ? FlutterFlowTheme.of(context).info
-                                      : FlutterFlowTheme.of(context).accent1,
-                                  borderRadius: BorderRadius.circular(12.0),
-                                ),
+                    ),
+                    child: Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 12.0, 12.0, 12.0),
+                            child: Container(
+                              width: 4.0,
+                              height: 100.0,
+                              decoration: BoxDecoration(
+                                color: widget.selectedNav == 3
+                                    ? FlutterFlowTheme.of(context).info
+                                    : FlutterFlowTheme.of(context).accent1,
+                                borderRadius: BorderRadius.circular(12.0),
                               ),
                             ),
-                            Icon(
-                              Icons.ten_mp_rounded,
-                              color: FlutterFlowTheme.of(context).info,
-                              size: 28.0,
+                          ),
+                          Icon(
+                            Icons.ten_mp_rounded,
+                            color: FlutterFlowTheme.of(context).info,
+                            size: 28.0,
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                12.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              'Members',
+                              style: FlutterFlowTheme.of(context)
+                                  .labelMedium
+                                  .override(
+                                    fontFamily: 'Plus Jakarta Sans',
+                                    color: FlutterFlowTheme.of(context).info,
+                                  ),
                             ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 0.0, 0.0, 0.0),
-                              child: Text(
-                                'Members',
-                                style: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .override(
-                                      fontFamily: 'Plus Jakarta Sans',
-                                      color: FlutterFlowTheme.of(context).info,
-                                    ),
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
