@@ -3,13 +3,17 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 
 class FFAppState extends ChangeNotifier {
-  static final FFAppState _instance = FFAppState._internal();
+  static FFAppState _instance = FFAppState._internal();
 
   factory FFAppState() {
     return _instance;
   }
 
   FFAppState._internal();
+
+  static void reset() {
+    _instance = FFAppState._internal();
+  }
 
   Future initializePersistedState() async {
     prefs = await SharedPreferences.getInstance();
@@ -30,16 +34,22 @@ class FFAppState extends ChangeNotifier {
 
   bool _navOpen = false;
   bool get navOpen => _navOpen;
-  set navOpen(bool _value) {
-    _navOpen = _value;
-    prefs.setBool('ff_navOpen', _value);
+  set navOpen(bool value) {
+    _navOpen = value;
+    prefs.setBool('ff_navOpen', value);
   }
 
   bool _navTestOpen = false;
   bool get navTestOpen => _navTestOpen;
-  set navTestOpen(bool _value) {
-    _navTestOpen = _value;
-    prefs.setBool('ff_navTestOpen', _value);
+  set navTestOpen(bool value) {
+    _navTestOpen = value;
+    prefs.setBool('ff_navTestOpen', value);
+  }
+
+  String _QuebraLinha = '';
+  String get QuebraLinha => _QuebraLinha;
+  set QuebraLinha(String value) {
+    _QuebraLinha = value;
   }
 }
 

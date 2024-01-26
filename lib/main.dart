@@ -1,5 +1,4 @@
 import 'package:provider/provider.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -7,10 +6,7 @@ import 'package:flutter_web_plugins/url_strategy.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 
 void main() async {
@@ -22,11 +18,13 @@ void main() async {
 
   runApp(ChangeNotifierProvider(
     create: (context) => appState,
-    child: MyApp(),
+    child: const MyApp(),
   ));
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   // This widget is the root of your application.
   @override
   State<MyApp> createState() => _MyAppState();
@@ -47,10 +45,11 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
+
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
 
-    Future.delayed(Duration(milliseconds: 1000),
+    Future.delayed(const Duration(milliseconds: 1000),
         () => setState(() => _appStateNotifier.stopShowingSplashImage()));
   }
 
@@ -66,7 +65,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'ADBSetor63',
-      localizationsDelegates: [
+      localizationsDelegates: const [
         FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
@@ -83,15 +82,15 @@ class _MyAppState extends State<MyApp> {
           trackVisibility: MaterialStateProperty.all(false),
           interactive: true,
           thickness: MaterialStateProperty.all(8.0),
-          radius: Radius.circular(4.0),
+          radius: const Radius.circular(4.0),
           thumbColor: MaterialStateProperty.resolveWith((states) {
             if (states.contains(MaterialState.dragged)) {
-              return Color(4285489647);
+              return const Color(0xff6f61ef);
             }
             if (states.contains(MaterialState.hovered)) {
-              return Color(1301580277);
+              return const Color(0x4d9489f5);
             }
-            return Color(4293257195);
+            return const Color(0xffe5e7eb);
           }),
           minThumbLength: 20.0,
         ),
@@ -103,7 +102,7 @@ class _MyAppState extends State<MyApp> {
 }
 
 class NavBarPage extends StatefulWidget {
-  NavBarPage({Key? key, this.initialPage, this.page}) : super(key: key);
+  const NavBarPage({super.key, this.initialPage, this.page});
 
   final String? initialPage;
   final Widget? page;
@@ -127,8 +126,8 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'main_Dashboard': MainDashboardWidget(),
-      'main_0_menu': Main0MenuWidget(),
+      'main_Dashboard': const MainDashboardWidget(),
+      'main_0_menu': const Main0MenuWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -146,13 +145,13 @@ class _NavBarPageState extends State<NavBarPage> {
             _currentPage = null;
             _currentPageName = tabs.keys.toList()[i];
           }),
-          backgroundColor: FlutterFlowTheme.of(context).primary,
-          selectedItemColor: FlutterFlowTheme.of(context).primaryText,
+          backgroundColor: Colors.black,
+          selectedItemColor: Colors.white,
           unselectedItemColor: FlutterFlowTheme.of(context).accent4,
           showSelectedLabels: true,
-          showUnselectedLabels: false,
+          showUnselectedLabels: true,
           type: BottomNavigationBarType.fixed,
-          items: <BottomNavigationBarItem>[
+          items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: FaIcon(
                 FontAwesomeIcons.internetExplorer,
@@ -165,7 +164,7 @@ class _NavBarPageState extends State<NavBarPage> {
               icon: Icon(
                 Icons.menu_book,
               ),
-              label: 'Menu',
+              label: 'Conheça o Setor 63',
               tooltip: '',
             )
           ],

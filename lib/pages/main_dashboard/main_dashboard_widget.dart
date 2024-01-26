@@ -1,19 +1,19 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_web_view.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'main_dashboard_model.dart';
 export 'main_dashboard_model.dart';
 
 class MainDashboardWidget extends StatefulWidget {
-  const MainDashboardWidget({Key? key}) : super(key: key);
+  const MainDashboardWidget({super.key});
 
   @override
-  _MainDashboardWidgetState createState() => _MainDashboardWidgetState();
+  State<MainDashboardWidget> createState() => _MainDashboardWidgetState();
 }
 
 class _MainDashboardWidgetState extends State<MainDashboardWidget> {
@@ -25,6 +25,11 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => MainDashboardModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      await actions.lockOrientation();
+    });
   }
 
   @override
@@ -36,6 +41,15 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
 
   @override
   Widget build(BuildContext context) {
+    if (isiOS) {
+      SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(
+          statusBarBrightness: Theme.of(context).brightness,
+          systemStatusBarContrastEnforced: true,
+        ),
+      );
+    }
+
     context.watch<FFAppState>();
 
     return Scaffold(
@@ -47,32 +61,35 @@ class _MainDashboardWidgetState extends State<MainDashboardWidget> {
         desktop: false,
       )
           ? AppBar(
-              backgroundColor: FlutterFlowTheme.of(context).primary,
+              backgroundColor: Colors.black,
               automaticallyImplyLeading: false,
-              title: Text(
-                ' AD Belém - Setor 63',
-                style: FlutterFlowTheme.of(context).headlineMedium.override(
-                      fontFamily: 'Outfit',
-                      color: Colors.white,
-                      fontSize: 22.0,
-                    ),
+              title: Align(
+                alignment: const AlignmentDirectional(0.0, -1.0),
+                child: Text(
+                  ' AD Belém - Site do Ministério',
+                  style: FlutterFlowTheme.of(context).headlineMedium.override(
+                        fontFamily: 'Outfit',
+                        color: Colors.white,
+                        fontSize: 22.0,
+                      ),
+                ),
               ),
-              actions: [],
+              actions: const [],
               centerTitle: false,
               elevation: 2.0,
             )
           : null,
-      body: SafeArea(
+      body: const SafeArea(
         top: true,
         child: Stack(
           children: [
             Align(
-              alignment: AlignmentDirectional(0.0, -1.0),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: FlutterFlowWebView(
-                content: 'https://ad.org.br',
+                content: 'https://ad.org.br/',
                 bypass: false,
-                height: 824.0,
-                verticalScroll: false,
+                height: 825.0,
+                verticalScroll: true,
                 horizontalScroll: false,
               ),
             ),

@@ -3,17 +3,16 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_web_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'menu_radio01_rbc_model.dart';
 export 'menu_radio01_rbc_model.dart';
 
 class MenuRadio01RbcWidget extends StatefulWidget {
-  const MenuRadio01RbcWidget({Key? key}) : super(key: key);
+  const MenuRadio01RbcWidget({super.key});
 
   @override
-  _MenuRadio01RbcWidgetState createState() => _MenuRadio01RbcWidgetState();
+  State<MenuRadio01RbcWidget> createState() => _MenuRadio01RbcWidgetState();
 }
 
 class _MenuRadio01RbcWidgetState extends State<MenuRadio01RbcWidget> {
@@ -36,6 +35,15 @@ class _MenuRadio01RbcWidgetState extends State<MenuRadio01RbcWidget> {
 
   @override
   Widget build(BuildContext context) {
+    if (isiOS) {
+      SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(
+          statusBarBrightness: Theme.of(context).brightness,
+          systemStatusBarContrastEnforced: true,
+        ),
+      );
+    }
+
     context.watch<FFAppState>();
 
     return Scaffold(
@@ -47,14 +55,14 @@ class _MenuRadio01RbcWidgetState extends State<MenuRadio01RbcWidget> {
         desktop: false,
       )
           ? AppBar(
-              backgroundColor: FlutterFlowTheme.of(context).primary,
+              backgroundColor: Colors.black,
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_back_rounded,
                   color: Colors.white,
                   size: 30.0,
@@ -71,12 +79,12 @@ class _MenuRadio01RbcWidgetState extends State<MenuRadio01RbcWidget> {
                       fontSize: 22.0,
                     ),
               ),
-              actions: [],
+              actions: const [],
               centerTitle: true,
               elevation: 2.0,
             )
           : null,
-      body: SafeArea(
+      body: const SafeArea(
         top: true,
         child: Stack(
           children: [

@@ -1,4 +1,4 @@
-package com.iburgheri.adsetor63
+package com.mycompany.adsetor63
 
 import io.flutter.embedding.android.FlutterActivity
 

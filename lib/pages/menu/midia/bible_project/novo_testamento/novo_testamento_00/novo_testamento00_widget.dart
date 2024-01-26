@@ -3,17 +3,16 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'novo_testamento00_model.dart';
 export 'novo_testamento00_model.dart';
 
 class NovoTestamento00Widget extends StatefulWidget {
-  const NovoTestamento00Widget({Key? key}) : super(key: key);
+  const NovoTestamento00Widget({super.key});
 
   @override
-  _NovoTestamento00WidgetState createState() => _NovoTestamento00WidgetState();
+  State<NovoTestamento00Widget> createState() => _NovoTestamento00WidgetState();
 }
 
 class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
@@ -36,33 +35,44 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
 
   @override
   Widget build(BuildContext context) {
+    if (isiOS) {
+      SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(
+          statusBarBrightness: Theme.of(context).brightness,
+          systemStatusBarContrastEnforced: true,
+        ),
+      );
+    }
+
     context.watch<FFAppState>();
 
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
+      onTap: () => _model.unfocusNode.canRequestFocus
+          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+          : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFFF1F4F8),
+        backgroundColor: const Color(0xFFF1F4F8),
         appBar: responsiveVisibility(
           context: context,
           tabletLandscape: false,
           desktop: false,
         )
             ? AppBar(
-                backgroundColor: FlutterFlowTheme.of(context).primary,
+                backgroundColor: Colors.black,
                 automaticallyImplyLeading: false,
                 leading: FlutterFlowIconButton(
                   borderColor: Colors.transparent,
                   borderRadius: 30.0,
                   borderWidth: 1.0,
                   buttonSize: 60.0,
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.arrow_back_rounded,
                     color: Colors.white,
                     size: 30.0,
                   ),
                   onPressed: () async {
-                    context.pushNamed('biblieProject_menu');
+                    context.pop();
                   },
                 ),
                 title: Text(
@@ -72,7 +82,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                         color: Colors.white,
                       ),
                 ),
-                actions: [],
+                actions: const [],
                 centerTitle: true,
                 elevation: 2.0,
               )
@@ -88,25 +98,25 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                   header: Container(
                     width: double.infinity,
                     height: 50.0,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 430.0,
                     ),
                     decoration: BoxDecoration(
-                      color: Color(0xFFF1F4F8),
+                      color: const Color(0xFFF1F4F8),
                       borderRadius: BorderRadius.circular(0.0),
                     ),
-                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    alignment: const AlignmentDirectional(-1.0, 0.0),
                     child: Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                         child: Text(
                           'Os Evangelhos:',
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
                                     fontFamily: 'Outfit',
-                                    color: Color(0xFF15161E),
+                                    color: const Color(0xFF15161E),
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -116,7 +126,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                   ),
                   content: Container(
                     width: double.infinity,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 430.0,
                     ),
                     decoration: BoxDecoration(
@@ -130,15 +140,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                       scrollDirection: Axis.vertical,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -147,46 +157,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Visão Geral: O Novo Testamento',
@@ -194,7 +179,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -210,7 +195,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context.pushNamed(
                                             'novoTestamento_01_Geral');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -223,15 +208,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -240,46 +225,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Mateus 1-13',
@@ -287,7 +247,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -303,7 +263,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_02_Mt');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -316,15 +276,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -333,46 +293,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Mateus 14-28',
@@ -380,7 +315,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -396,7 +331,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_03_Mt');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -409,15 +344,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -426,46 +361,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Marcos',
@@ -473,7 +383,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -489,7 +399,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_04_Mc');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -502,15 +412,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -519,46 +429,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Lucas 1-9',
@@ -566,7 +451,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -582,7 +467,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_05_Lc');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -595,15 +480,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -612,46 +497,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Lucas 10-24 ',
@@ -659,7 +519,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -675,7 +535,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_06_Lc');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -688,15 +548,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -705,46 +565,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'João 1-12',
@@ -752,7 +587,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -768,7 +603,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context.pushNamed(
                                             'novoTestamento_07_Jo_01');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -781,15 +616,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -798,46 +633,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'João 13-21',
@@ -845,7 +655,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -861,7 +671,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context.pushNamed(
                                             'novoTestamento_07_Jo_02');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -882,25 +692,25 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                   header: Container(
                     width: double.infinity,
                     height: 50.0,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 430.0,
                     ),
                     decoration: BoxDecoration(
-                      color: Color(0xFFF1F4F8),
+                      color: const Color(0xFFF1F4F8),
                       borderRadius: BorderRadius.circular(0.0),
                     ),
-                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    alignment: const AlignmentDirectional(-1.0, 0.0),
                     child: Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                         child: Text(
                           'O Livro Histórico',
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
                                     fontFamily: 'Outfit',
-                                    color: Color(0xFF15161E),
+                                    color: const Color(0xFF15161E),
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -910,7 +720,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                   ),
                   content: Container(
                     width: double.infinity,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 430.0,
                     ),
                     decoration: BoxDecoration(
@@ -924,15 +734,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                       scrollDirection: Axis.vertical,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -941,46 +751,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Atos 1-12',
@@ -988,7 +773,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -1004,7 +789,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_08_At');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -1017,15 +802,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -1034,46 +819,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Atos 13-28',
@@ -1081,7 +841,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -1097,7 +857,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_09_At');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -1118,25 +878,25 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                   header: Container(
                     width: double.infinity,
                     height: 50.0,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 430.0,
                     ),
                     decoration: BoxDecoration(
-                      color: Color(0xFFF1F4F8),
+                      color: const Color(0xFFF1F4F8),
                       borderRadius: BorderRadius.circular(0.0),
                     ),
-                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    alignment: const AlignmentDirectional(-1.0, 0.0),
                     child: Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                         child: Text(
                           'Cartas dos Apóstolos',
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
                                     fontFamily: 'Outfit',
-                                    color: Color(0xFF15161E),
+                                    color: const Color(0xFF15161E),
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -1146,7 +906,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                   ),
                   content: Container(
                     width: double.infinity,
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 430.0,
                     ),
                     decoration: BoxDecoration(
@@ -1160,15 +920,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                       scrollDirection: Axis.vertical,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -1177,46 +937,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Romanos 1-4',
@@ -1224,7 +959,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -1240,7 +975,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_10_Rm');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -1253,15 +988,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -1270,46 +1005,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Romanos 5-16',
@@ -1317,7 +1027,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -1333,7 +1043,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_11_Rm');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -1346,15 +1056,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -1363,46 +1073,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           '1 Coríntios',
@@ -1410,7 +1095,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -1426,7 +1111,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_12_1Co');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -1439,15 +1124,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -1456,46 +1141,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           '2 Coríntios',
@@ -1503,7 +1163,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -1519,7 +1179,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_13_2Co');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -1532,15 +1192,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -1549,46 +1209,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Gálatas ',
@@ -1596,7 +1231,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -1612,7 +1247,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_14_Gl');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -1625,15 +1260,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -1642,46 +1277,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Efésios ',
@@ -1689,7 +1299,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -1705,7 +1315,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_15_Ef');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -1718,15 +1328,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -1735,46 +1345,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Filipenses ',
@@ -1782,7 +1367,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -1798,7 +1383,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_16_Fp');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -1811,15 +1396,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -1828,46 +1413,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Colossenses ',
@@ -1875,7 +1435,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -1891,7 +1451,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_17_Cl');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -1904,15 +1464,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -1921,46 +1481,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           '1 Tessalonicenses',
@@ -1968,7 +1503,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -1984,7 +1519,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_18_1Ts');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -1997,15 +1532,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -2014,46 +1549,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           '2 Tessalonicenses',
@@ -2061,7 +1571,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -2077,7 +1587,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_19_2Ts');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -2090,15 +1600,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -2107,46 +1617,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           '1 Timóteo',
@@ -2154,7 +1639,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -2170,7 +1655,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_20_1Tm');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -2183,15 +1668,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -2200,46 +1685,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           '2 Timóteo',
@@ -2247,7 +1707,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -2263,7 +1723,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_21_2Tm');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -2276,15 +1736,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -2293,46 +1753,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Tito ',
@@ -2340,7 +1775,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -2356,7 +1791,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_22_Tt');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -2369,15 +1804,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -2386,46 +1821,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Filemom ',
@@ -2433,7 +1843,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -2449,7 +1859,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_23_Fm');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -2462,15 +1872,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -2479,46 +1889,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Hebreus ',
@@ -2526,7 +1911,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -2542,7 +1927,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_24_Hb');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -2555,15 +1940,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -2572,46 +1957,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Tiago ',
@@ -2619,7 +1979,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -2635,7 +1995,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_25_Tg');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -2648,15 +2008,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -2665,46 +2025,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           '1 Pedro',
@@ -2712,7 +2047,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -2728,7 +2063,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_26_1Pe');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -2741,15 +2076,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -2758,46 +2093,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           '2 Pedro ',
@@ -2805,7 +2115,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -2821,7 +2131,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_27_2Pe');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -2834,15 +2144,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -2851,46 +2161,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'João 1-2-3 ',
@@ -2898,7 +2183,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -2914,7 +2199,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context.pushNamed(
                                             'novoTestamento_28_1-2-3_Jo');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -2927,15 +2212,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 1.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
@@ -2944,46 +2229,21 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
                                 border: Border.all(
-                                  color: Color(0xFFF1F4F8),
+                                  color: const Color(0xFFF1F4F8),
                                   width: 1.0,
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 0.0, 0.0),
-                                      child: Container(
-                                        width: 44.0,
-                                        height: 44.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFF6F61EF),
-                                          shape: BoxShape.circle,
-                                        ),
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Text(
-                                          'A',
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleMedium
-                                              .override(
-                                                fontFamily: 'Plus Jakarta Sans',
-                                                color: Colors.white,
-                                                fontSize: 18.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
                                           'Judas ',
@@ -2991,7 +2251,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: Color(0xFF15161E),
+                                                color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
@@ -3007,7 +2267,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                         context
                                             .pushNamed('novoTestamento_29_Jd');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chevron_right_rounded,
                                         color: Color(0xFF606A85),
                                         size: 24.0,
@@ -3024,24 +2284,24 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 400.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 400.0),
                   child: StickyHeader(
                     overlapHeaders: false,
                     header: Container(
                       width: double.infinity,
                       height: 50.0,
-                      constraints: BoxConstraints(
+                      constraints: const BoxConstraints(
                         maxWidth: 430.0,
                       ),
                       decoration: BoxDecoration(
-                        color: Color(0xFFF1F4F8),
+                        color: const Color(0xFFF1F4F8),
                         borderRadius: BorderRadius.circular(0.0),
                       ),
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Align(
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'O Livro Profético',
@@ -3049,7 +2309,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF15161E),
+                                  color: const Color(0xFF15161E),
                                   fontSize: 22.0,
                                   fontWeight: FontWeight.w500,
                                 ),
@@ -3059,7 +2319,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                     ),
                     content: Container(
                       width: double.infinity,
-                      constraints: BoxConstraints(
+                      constraints: const BoxConstraints(
                         maxWidth: 430.0,
                       ),
                       decoration: BoxDecoration(
@@ -3073,15 +2333,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                         scrollDirection: Axis.vertical,
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 1.0),
                               child: Container(
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                   color: Colors.white,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 0.0,
                                       color: Color(0xFFF1F4F8),
@@ -3090,48 +2350,22 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   ],
                                   borderRadius: BorderRadius.circular(0.0),
                                   border: Border.all(
-                                    color: Color(0xFFF1F4F8),
+                                    color: const Color(0xFFF1F4F8),
                                     width: 1.0,
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 0.0, 0.0, 0.0),
-                                        child: Container(
-                                          width: 44.0,
-                                          height: 44.0,
-                                          decoration: BoxDecoration(
-                                            color: Color(0xFF6F61EF),
-                                            shape: BoxShape.circle,
-                                          ),
-                                          alignment:
-                                              AlignmentDirectional(0.0, 0.0),
-                                          child: Text(
-                                            'A',
-                                            style: FlutterFlowTheme.of(context)
-                                                .titleMedium
-                                                .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
-                                                  color: Colors.white,
-                                                  fontSize: 18.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                          ),
-                                        ),
-                                      ),
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 12.0, 0.0),
                                           child: Text(
                                             'Apocalipse 1-11',
@@ -3140,7 +2374,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: Color(0xFF15161E),
+                                                  color: const Color(0xFF15161E),
                                                   fontSize: 16.0,
                                                   fontWeight: FontWeight.w600,
                                                 ),
@@ -3156,7 +2390,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                           context.pushNamed(
                                               'novoTestamento_30_Ap');
                                         },
-                                        child: Icon(
+                                        child: const Icon(
                                           Icons.chevron_right_rounded,
                                           color: Color(0xFF606A85),
                                           size: 24.0,
@@ -3169,15 +2403,15 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 1.0),
                               child: Container(
                                 width: double.infinity,
                                 decoration: BoxDecoration(
                                   color: Colors.white,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 0.0,
                                       color: Color(0xFFF1F4F8),
@@ -3186,48 +2420,22 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   ],
                                   borderRadius: BorderRadius.circular(0.0),
                                   border: Border.all(
-                                    color: Color(0xFFF1F4F8),
+                                    color: const Color(0xFFF1F4F8),
                                     width: 1.0,
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 12.0, 16.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 0.0, 0.0, 0.0),
-                                        child: Container(
-                                          width: 44.0,
-                                          height: 44.0,
-                                          decoration: BoxDecoration(
-                                            color: Color(0xFF6F61EF),
-                                            shape: BoxShape.circle,
-                                          ),
-                                          alignment:
-                                              AlignmentDirectional(0.0, 0.0),
-                                          child: Text(
-                                            'A',
-                                            style: FlutterFlowTheme.of(context)
-                                                .titleMedium
-                                                .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
-                                                  color: Colors.white,
-                                                  fontSize: 18.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                          ),
-                                        ),
-                                      ),
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 12.0, 0.0),
                                           child: Text(
                                             'Apocalipse 12-22',
@@ -3236,7 +2444,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: Color(0xFF15161E),
+                                                  color: const Color(0xFF15161E),
                                                   fontSize: 16.0,
                                                   fontWeight: FontWeight.w600,
                                                 ),
@@ -3252,7 +2460,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                           context.pushNamed(
                                               'novoTestamento_31_Ap02');
                                         },
-                                        child: Icon(
+                                        child: const Icon(
                                           Icons.chevron_right_rounded,
                                           color: Color(0xFF606A85),
                                           size: 24.0,

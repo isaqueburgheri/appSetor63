@@ -1,26 +1,25 @@
-import '/flutter_flow/flutter_flow_expanded_image_view.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:map_launcher/map_launcher.dart' as $ml;
+import 'setor6304_castro_alves_widget.dart' show Setor6304CastroAlvesWidget;
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:provider/provider.dart';
 
-class Setor6304CastroAlvesModel extends FlutterFlowModel {
+class Setor6304CastroAlvesModel
+    extends FlutterFlowModel<Setor6304CastroAlvesWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  // State field(s) for Expandable widget.
+  late ExpandableController expandableController;
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {}
 
+  @override
   void dispose() {
     unfocusNode.dispose();
+    expandableController.dispose();
   }
 
   /// Action blocks are added here.

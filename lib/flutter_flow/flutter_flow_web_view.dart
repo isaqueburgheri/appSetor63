@@ -1,14 +1,19 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart' hide NavigationDecision;
+import 'package:webview_flutter_android/webview_flutter_android.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:file_picker/file_picker.dart';
 
 import 'flutter_flow_util.dart';
 
 class FlutterFlowWebView extends StatefulWidget {
   const FlutterFlowWebView({
-    Key? key,
+    super.key,
     required this.content,
     this.width,
     this.height,
@@ -16,7 +21,7 @@ class FlutterFlowWebView extends StatefulWidget {
     this.horizontalScroll = false,
     this.verticalScroll = false,
     this.html = false,
-  }) : super(key: key);
+  });
 
   final String content;
   final double? height;
@@ -46,6 +51,13 @@ class _FlutterFlowWebViewState extends State<FlutterFlowWebView> {
                 ? SourceType.urlBypass
                 : SourceType.url,
         javascriptMode: JavascriptMode.unrestricted,
+        onWebViewCreated: (controller) async {
+          if (controller.connector is WebViewController && isAndroid) {
+            final androidController =
+                controller.connector.platform as AndroidWebViewController;
+            await androidController.setOnShowFileSelector(_androidFilePicker);
+          }
+        },
         navigationDelegate: (request) async {
           if (isAndroid) {
             if (request.content.source
@@ -92,4 +104,16 @@ class _FlutterFlowWebViewState extends State<FlutterFlowWebView> {
           widget.html,
         ].map((s) => s?.toString() ?? '').join(),
       );
+
+  Future<List<String>> _androidFilePicker(
+    final FileSelectorParams params,
+  ) async {
+    final result = await FilePicker.platform.pickFiles();
+
+    if (result != null && result.files.single.path != null) {
+      final file = File(result.files.single.path!);
+      return [file.uri.toString()];
+    }
+    return [];
+  }
 }

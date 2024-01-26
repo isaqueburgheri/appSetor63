@@ -2,21 +2,18 @@ import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:map_launcher/map_launcher.dart' as $ml;
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'setor6302_barro_branco_model.dart';
 export 'setor6302_barro_branco_model.dart';
 
 class Setor6302BarroBrancoWidget extends StatefulWidget {
-  const Setor6302BarroBrancoWidget({Key? key}) : super(key: key);
+  const Setor6302BarroBrancoWidget({super.key});
 
   @override
-  _Setor6302BarroBrancoWidgetState createState() =>
+  State<Setor6302BarroBrancoWidget> createState() =>
       _Setor6302BarroBrancoWidgetState();
 }
 
@@ -30,6 +27,8 @@ class _Setor6302BarroBrancoWidgetState
   void initState() {
     super.initState();
     _model = createModel(context, () => Setor6302BarroBrancoModel());
+
+    _model.expandableController = ExpandableController(initialExpanded: false);
   }
 
   @override
@@ -41,10 +40,21 @@ class _Setor6302BarroBrancoWidgetState
 
   @override
   Widget build(BuildContext context) {
+    if (isiOS) {
+      SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(
+          statusBarBrightness: Theme.of(context).brightness,
+          systemStatusBarContrastEnforced: true,
+        ),
+      );
+    }
+
     context.watch<FFAppState>();
 
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
+      onTap: () => _model.unfocusNode.canRequestFocus
+          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+          : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Colors.white,
@@ -61,7 +71,7 @@ class _Setor6302BarroBrancoWidgetState
                   borderRadius: 30.0,
                   borderWidth: 1.0,
                   buttonSize: 60.0,
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.arrow_back_rounded,
                     color: Color(0xFF101213),
                     size: 30.0,
@@ -70,7 +80,7 @@ class _Setor6302BarroBrancoWidgetState
                     context.pop();
                   },
                 ),
-                actions: [],
+                actions: const [],
                 centerTitle: true,
                 elevation: 0.0,
               )
@@ -87,16 +97,16 @@ class _Setor6302BarroBrancoWidgetState
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 0.0, 0.0),
                                 child: Text(
                                   'Assembléia de Deus - Belém',
@@ -104,7 +114,7 @@ class _Setor6302BarroBrancoWidgetState
                                       .headlineMedium
                                       .override(
                                         fontFamily: 'Plus Jakarta Sans',
-                                        color: Color(0xFF101213),
+                                        color: const Color(0xFF101213),
                                         fontSize: 24.0,
                                         fontWeight: FontWeight.w500,
                                       ),
@@ -112,14 +122,14 @@ class _Setor6302BarroBrancoWidgetState
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 16.0, 0.0, 0.0),
                               child: Container(
                                 width: double.infinity,
                                 height: 230.0,
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFE0E3E7),
-                                  boxShadow: [
+                                  color: const Color(0xFFE0E3E7),
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 12.0,
                                       color: Color(0x33000000),
@@ -129,8 +139,7 @@ class _Setor6302BarroBrancoWidgetState
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      2.0, 2.0, 2.0, 2.0),
+                                  padding: const EdgeInsets.all(2.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
                                     focusColor: Colors.transparent,
@@ -175,18 +184,18 @@ class _Setor6302BarroBrancoWidgetState
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         child: Container(
                           width: double.infinity,
                           color: Colors.white,
                           child: ExpandableNotifier(
-                            initialExpanded: false,
+                            controller: _model.expandableController,
                             child: ExpandablePanel(
                               header: Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 8.0, 0.0, 0.0),
                                   child: Text(
                                     'Cong. Barro Branco',
@@ -194,7 +203,7 @@ class _Setor6302BarroBrancoWidgetState
                                         .headlineSmall
                                         .override(
                                           fontFamily: 'Plus Jakarta Sans',
-                                          color: Color(0xFF101213),
+                                          color: const Color(0xFF101213),
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.bold,
                                         ),
@@ -204,13 +213,13 @@ class _Setor6302BarroBrancoWidgetState
                               collapsed: Container(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 height: 33.0,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Colors.white,
                                 ),
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, -1.0),
+                                  alignment: const AlignmentDirectional(0.0, -1.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 8.0, 0.0, 0.0),
                                     child: Text(
                                       'Faça parte desta família. Cultue conosco!',
@@ -218,7 +227,7 @@ class _Setor6302BarroBrancoWidgetState
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Plus Jakarta Sans',
-                                            color: Color(0xFF57636C),
+                                            color: const Color(0xFF57636C),
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.w500,
                                           ),
@@ -230,9 +239,9 @@ class _Setor6302BarroBrancoWidgetState
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 8.0, 0.0, 12.0),
                                       child: Text(
                                         '“Eis que estou à porta e bato. Se alguém ouvir a minha voz e abrir a porta, entrarei e cearei com ele, e ele comigo.” \nApocalipse 3:20\n\nChegará o dia que Ele enxugará dos nossos olhos toda lágrima e não haverá mais morte, nem tristeza, nem choro, nem dor e tudo se fará novo! \n\nGuarde essas palavras em seu coração e permaneça firme até sua volta.',
@@ -240,7 +249,7 @@ class _Setor6302BarroBrancoWidgetState
                                             .labelMedium
                                             .override(
                                               fontFamily: 'Plus Jakarta Sans',
-                                              color: Color(0xFF57636C),
+                                              color: const Color(0xFF57636C),
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.w500,
                                             ),
@@ -249,7 +258,7 @@ class _Setor6302BarroBrancoWidgetState
                                   ),
                                 ],
                               ),
-                              theme: ExpandableThemeData(
+                              theme: const ExpandableThemeData(
                                 tapHeaderToExpand: true,
                                 tapBodyToExpand: true,
                                 tapBodyToCollapse: true,
@@ -261,76 +270,45 @@ class _Setor6302BarroBrancoWidgetState
                           ),
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         height: 12.0,
                         thickness: 1.0,
                         color: Color(0xFFE0E3E7),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        child: Container(
-                          width: 220.0,
-                          height: 220.0,
-                          clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                          ),
-                          child: Image.asset(
-                            'assets/images/download.jpg',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        child: Text(
-                          'Pastor Local',
-                          style: FlutterFlowTheme.of(context).bodyLarge,
-                        ),
-                      ),
-                      Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        child: Text(
-                          'Nome do pastor',
-                          style: FlutterFlowTheme.of(context).bodyMedium,
-                        ),
-                      ),
-                      Divider(
-                        height: 12.0,
-                        thickness: 1.0,
-                        color: Color(0xFFE0E3E7),
-                      ),
-                      Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Text(
                           '🕖 Nossos horários de cultos são:',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Plus Jakarta Sans',
                                     fontSize: 18.0,
+                                    fontWeight: FontWeight.w800,
                                   ),
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Text(
-                          '\n👨‍👩‍👦‍👦 Domingo - Culto da Família às 18:30h\n📖 Quarta-feira - Culto de Ensino às 19:30h\n🙏 Quinta-feira - Círculo de Oração às 14:30h\n🙌 Sexta-feira - Culto de Milagres às 19:30h\n🍞🍷 3° Sábado - Culto de Santa Ceia às 18:30h\n',
+                          '\n🔸Domingo\nEscola Bíblica Dominical às 09:00\nCulto da Família às 18:00\n\n1º Domingo do mês\nCulto de Missões às 18:00\n\n2º Domingo do mês\nCulto de Santa ceia do Senhor às 09:00\n\n🔸Terça-Feira\nConsagração das 08:00 às 09:00\nCulto de Ensino da Palavra de Deus às 19:30\n\n🔸Quarta-Feira\nCírculo de Oração às 14:00\n\n🔸Quinta-Feira\nConsagração das 08:00 às 09:00\nCulto Público às 19:30',
+                          textAlign: TextAlign.center,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Plus Jakarta Sans',
                                     fontSize: 15.0,
+                                    fontWeight: FontWeight.w800,
                                   ),
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         height: 12.0,
                         thickness: 1.0,
                         color: Color(0xFFE0E3E7),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 12.0, 0.0, 0.0),
                           child: Text(
                             'Redes Sociais',
@@ -338,7 +316,7 @@ class _Setor6302BarroBrancoWidgetState
                                 .labelLarge
                                 .override(
                                   fontFamily: 'Plus Jakarta Sans',
-                                  color: Color(0xFF57636C),
+                                  color: const Color(0xFF57636C),
                                   fontSize: 16.0,
                                   fontWeight: FontWeight.w500,
                                 ),
@@ -346,14 +324,14 @@ class _Setor6302BarroBrancoWidgetState
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 16.0, 12.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   2.0, 2.0, 12.0, 2.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -376,7 +354,7 @@ class _Setor6302BarroBrancoWidgetState
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   2.0, 2.0, 12.0, 2.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -399,7 +377,7 @@ class _Setor6302BarroBrancoWidgetState
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   2.0, 2.0, 12.0, 2.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -426,13 +404,13 @@ class _Setor6302BarroBrancoWidgetState
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                         child: Text(
                           'Endereço',
                           style:
                               FlutterFlowTheme.of(context).labelLarge.override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: Color(0xFF57636C),
+                                    color: const Color(0xFF57636C),
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -440,28 +418,28 @@ class _Setor6302BarroBrancoWidgetState
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 0.0, 0.0),
                         child: Text(
                           'Rua Cachoeira Três Ilhas, 20 - Conj. Hab. Castro Alves',
                           style: FlutterFlowTheme.of(context)
                               .headlineSmall
                               .override(
                                 fontFamily: 'Plus Jakarta Sans',
-                                color: Color(0xFF101213),
+                                color: const Color(0xFF101213),
                                 fontSize: 22.0,
                                 fontWeight: FontWeight.bold,
                               ),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 8.0, 0.0, 44.0),
                         child: Text(
                           'São Paulo - SP, 08475-130',
                           style:
                               FlutterFlowTheme.of(context).labelLarge.override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: Color(0xFF57636C),
+                                    color: const Color(0xFF57636C),
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -472,7 +450,7 @@ class _Setor6302BarroBrancoWidgetState
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 12.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 12.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -489,12 +467,12 @@ class _Setor6302BarroBrancoWidgetState
                     width: double.infinity,
                     height: 50.0,
                     decoration: BoxDecoration(
-                      color: Color(0x4C4B39EF),
+                      color: const Color(0x4C4B39EF),
                       boxShadow: [
                         BoxShadow(
                           blurRadius: 4.0,
                           color: FlutterFlowTheme.of(context).primaryText,
-                          offset: Offset(0.0, 2.0),
+                          offset: const Offset(0.0, 2.0),
                         )
                       ],
                       borderRadius: BorderRadius.circular(12.0),
@@ -503,7 +481,7 @@ class _Setor6302BarroBrancoWidgetState
                         width: 2.0,
                       ),
                     ),
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Text(
                       '🗺️ Veja no mapa',
                       style: FlutterFlowTheme.of(context).bodyLarge.override(

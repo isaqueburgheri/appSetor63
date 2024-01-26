@@ -24,6 +24,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
@@ -34,6 +35,7 @@ final _youtubeFullScreenControllerMap = <String, YoutubePlayerController>{};
 
 class FlutterFlowYoutubePlayer extends StatefulWidget {
   const FlutterFlowYoutubePlayer({
+    super.key,
     required this.url,
     this.width,
     this.height,
@@ -43,6 +45,7 @@ class FlutterFlowYoutubePlayer extends StatefulWidget {
     this.showControls = true,
     this.showFullScreen = false,
     this.pauseOnNavigate = true,
+    this.strictRelatedVideos = false,
   });
 
   final String url;
@@ -54,6 +57,7 @@ class FlutterFlowYoutubePlayer extends StatefulWidget {
   final bool showControls;
   final bool showFullScreen;
   final bool pauseOnNavigate;
+  final bool strictRelatedVideos;
 
   @override
   State<FlutterFlowYoutubePlayer> createState() =>
@@ -138,25 +142,26 @@ class _FlutterFlowYoutubePlayerState extends State<FlutterFlowYoutubePlayer>
           loop: widget.looping,
           showControls: widget.showControls,
           showFullscreenButton: widget.showFullScreen,
+          strictRelatedVideos: widget.strictRelatedVideos,
         ),
       );
     }
     if (handleFullScreen) {
-      _controller!.onFullscreenChange = (fullScreen) {
+      _controller!.setFullScreenListener((fullScreen) {
         if (fullScreen) {
           _youtubeFullScreenControllerMap[_videoId!] = _controller!;
           _youtubeWrapper!.updateYoutubePlayer(_controller, _videoId);
         } else {
           _youtubeWrapper!.updateYoutubePlayer();
         }
-      };
+      });
     }
   }
 
   @override
   Widget build(BuildContext context) => FittedBox(
         fit: BoxFit.cover,
-        child: Container(
+        child: SizedBox(
           height: height,
           width: width,
           child: _controller != null
@@ -165,8 +170,16 @@ class _FlutterFlowYoutubePlayerState extends State<FlutterFlowYoutubePlayer>
                       controller: _controller!,
                       builder: (_, player) => player,
                       autoFullScreen: false,
+                      gestureRecognizers: const <Factory<
+                          TapGestureRecognizer>>{},
+                      enableFullScreenOnVerticalDrag: false,
                     )
-                  : YoutubePlayer(controller: _controller!)
+                  : YoutubePlayer(
+                      controller: _controller!,
+                      gestureRecognizers: const <Factory<
+                          TapGestureRecognizer>>{},
+                      enableFullScreenOnVerticalDrag: false,
+                    )
               : Container(color: Colors.transparent),
         ),
       );
@@ -174,7 +187,7 @@ class _FlutterFlowYoutubePlayerState extends State<FlutterFlowYoutubePlayer>
 
 /// Wraps the page in order to properly show the YouTube video when fullscreen.
 class YoutubeFullScreenWrapper extends StatefulWidget {
-  YoutubeFullScreenWrapper({Key? key, required this.child}) : super(key: key);
+  const YoutubeFullScreenWrapper({super.key, required this.child});
 
   final Widget child;
 
@@ -211,6 +224,7 @@ class _YoutubeFullScreenWrapperState extends State<YoutubeFullScreenWrapper> {
       ? YoutubePlayerScaffold(
           controller: _controller!,
           builder: (_, player) => player,
+          enableFullScreenOnVerticalDrag: false,
         )
       : widget.child;
 }
