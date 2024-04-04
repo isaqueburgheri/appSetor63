@@ -36,8 +36,6 @@ class MenuSugestoesModel extends FlutterFlowModel<MenuSugestoesWidget> {
     return null;
   }
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {
     textFieldEmailControllerValidator = _textFieldEmailControllerValidator;
@@ -53,8 +51,4 @@ class MenuSugestoesModel extends FlutterFlowModel<MenuSugestoesWidget> {
     textFieldNomeFocusNode?.dispose();
     textFieldNomeController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

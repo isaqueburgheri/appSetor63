@@ -3,15 +3,9 @@ import 'levitico04_widget.dart' show Levitico04Widget;
 import 'package:flutter/material.dart';
 
 class Levitico04Model extends FlutterFlowModel<Levitico04Widget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

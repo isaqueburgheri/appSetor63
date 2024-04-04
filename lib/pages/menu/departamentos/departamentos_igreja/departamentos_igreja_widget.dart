@@ -4,9 +4,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:provider/provider.dart';
 import 'departamentos_igreja_model.dart';
 export 'departamentos_igreja_model.dart';
 
@@ -137,17 +135,6 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -174,7 +161,7 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                     size: 30.0,
                   ),
                   onPressed: () async {
-                    context.pop();
+                    context.pushNamed('main_0_menu');
                   },
                 ),
                 title: Text(
@@ -183,6 +170,7 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                         fontFamily: 'Outfit',
                         color: Colors.white,
                         fontSize: 22.0,
+                        letterSpacing: 0.0,
                       ),
                 ),
                 actions: const [],
@@ -218,49 +206,6 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
                             ),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                InkWell(
-                                  splashColor: Colors.transparent,
-                                  focusColor: Colors.transparent,
-                                  hoverColor: Colors.transparent,
-                                  highlightColor: Colors.transparent,
-                                  onTap: () async {
-                                    await Navigator.push(
-                                      context,
-                                      PageTransition(
-                                        type: PageTransitionType.fade,
-                                        child: FlutterFlowExpandedImageView(
-                                          image: Image.asset(
-                                            'assets/images/recursoGrafico.png',
-                                            fit: BoxFit.contain,
-                                          ),
-                                          allowRotation: false,
-                                          tag: 'imageTag1',
-                                          useHeroAnimation: true,
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                  child: Hero(
-                                    tag: 'imageTag1',
-                                    transitionOnUserGestures: true,
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(0.0),
-                                      child: Image.asset(
-                                        'assets/images/recursoGrafico.png',
-                                        width: double.infinity,
-                                        height: 190.0,
-                                        fit: BoxFit.scaleDown,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
                           ).animateOnPageLoad(
                               animationsMap['containerOnPageLoadAnimation2']!),
                         ),
@@ -274,6 +219,7 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                       style: FlutterFlowTheme.of(context).labelMedium.override(
                             fontFamily: 'Plus Jakarta Sans',
                             color: Colors.white,
+                            letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
                           ),
                     ).animateOnPageLoad(
@@ -301,7 +247,10 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                 BoxShadow(
                                   blurRadius: 4.0,
                                   color: Color(0x520E151B),
-                                  offset: Offset(0.0, 2.0),
+                                  offset: Offset(
+                                    0.0,
+                                    2.0,
+                                  ),
                                 )
                               ],
                               borderRadius: BorderRadius.circular(8.0),
@@ -328,14 +277,14 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                               fit: BoxFit.contain,
                                             ),
                                             allowRotation: false,
-                                            tag: 'imageTag2',
+                                            tag: 'imageTag1',
                                             useHeroAnimation: true,
                                           ),
                                         ),
                                       );
                                     },
                                     child: Hero(
-                                      tag: 'imageTag2',
+                                      tag: 'imageTag1',
                                       transitionOnUserGestures: true,
                                       child: ClipRRect(
                                         borderRadius:
@@ -373,7 +322,12 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                               'Orquestra ',
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyLarge,
+                                                      .bodyLarge
+                                                      .override(
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                             Padding(
                                               padding: const EdgeInsetsDirectional
@@ -382,7 +336,12 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                                 'Orquestra Sinfonia de Louvor | Cidade Tiradentes',
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .labelMedium,
+                                                        .labelMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
+                                                          letterSpacing: 0.0,
+                                                        ),
                                               ),
                                             ),
                                           ],
@@ -418,7 +377,10 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                               BoxShadow(
                                 blurRadius: 4.0,
                                 color: Color(0x520E151B),
-                                offset: Offset(0.0, 2.0),
+                                offset: Offset(
+                                  0.0,
+                                  2.0,
+                                ),
                               )
                             ],
                             borderRadius: BorderRadius.circular(8.0),
@@ -441,23 +403,23 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                         type: PageTransitionType.fade,
                                         child: FlutterFlowExpandedImageView(
                                           image: Image.asset(
-                                            'assets/images/Dep_CREIO.jpg',
+                                            'assets/images/427946903_755856806129663_8326858695135251801_n.jpg',
                                             fit: BoxFit.contain,
                                           ),
                                           allowRotation: false,
-                                          tag: 'imageTag3',
+                                          tag: 'imageTag2',
                                           useHeroAnimation: true,
                                         ),
                                       ),
                                     );
                                   },
                                   child: Hero(
-                                    tag: 'imageTag3',
+                                    tag: 'imageTag2',
                                     transitionOnUserGestures: true,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(6.0),
                                       child: Image.asset(
-                                        'assets/images/Dep_CREIO.jpg',
+                                        'assets/images/427946903_755856806129663_8326858695135251801_n.jpg',
                                         width: 80.0,
                                         height: 80.0,
                                         fit: BoxFit.fitWidth,
@@ -476,7 +438,7 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
                                         await launchURL(
-                                            'https://www.instagram.com/creiotiradentes_/');
+                                            'https://www.instagram.com/creiotiradentes');
                                       },
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -488,7 +450,12 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                           Text(
                                             'CREIO',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyLarge,
+                                                .bodyLarge
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  letterSpacing: 0.0,
+                                                ),
                                           ),
                                           Padding(
                                             padding:
@@ -498,7 +465,12 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                               'Departamento de Adolescentes AD Belém SP | Cidade Tiradentes',
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .labelMedium,
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                           ),
                                         ],
@@ -524,7 +496,10 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                               BoxShadow(
                                 blurRadius: 5.0,
                                 color: Color(0x520E151B),
-                                offset: Offset(0.0, 2.0),
+                                offset: Offset(
+                                  0.0,
+                                  2.0,
+                                ),
                               )
                             ],
                             borderRadius: BorderRadius.circular(8.0),
@@ -551,14 +526,14 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                             fit: BoxFit.contain,
                                           ),
                                           allowRotation: false,
-                                          tag: 'imageTag4',
+                                          tag: 'imageTag3',
                                           useHeroAnimation: true,
                                         ),
                                       ),
                                     );
                                   },
                                   child: Hero(
-                                    tag: 'imageTag4',
+                                    tag: 'imageTag3',
                                     transitionOnUserGestures: true,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(6.0),
@@ -594,7 +569,12 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                           Text(
                                             'UMADEB',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyLarge,
+                                                .bodyLarge
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  letterSpacing: 0.0,
+                                                ),
                                           ),
                                           Padding(
                                             padding:
@@ -604,7 +584,12 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                               'União da Mocidade AD Belém SP | Cidade Tiradentes',
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .labelMedium,
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                           ),
                                         ],
@@ -630,7 +615,10 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                               BoxShadow(
                                 blurRadius: 5.0,
                                 color: Color(0x520E151B),
-                                offset: Offset(0.0, 2.0),
+                                offset: Offset(
+                                  0.0,
+                                  2.0,
+                                ),
                               )
                             ],
                             borderRadius: BorderRadius.circular(8.0),
@@ -653,23 +641,23 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                         type: PageTransitionType.fade,
                                         child: FlutterFlowExpandedImageView(
                                           image: Image.asset(
-                                            'assets/images/Dep_Umocit.jpg',
+                                            'assets/images/404577870_1065560877775567_6138786956663834464_n.jpg',
                                             fit: BoxFit.contain,
                                           ),
                                           allowRotation: false,
-                                          tag: 'imageTag5',
+                                          tag: 'imageTag4',
                                           useHeroAnimation: true,
                                         ),
                                       ),
                                     );
                                   },
                                   child: Hero(
-                                    tag: 'imageTag5',
+                                    tag: 'imageTag4',
                                     transitionOnUserGestures: true,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(6.0),
                                       child: Image.asset(
-                                        'assets/images/Dep_Umocit.jpg',
+                                        'assets/images/404577870_1065560877775567_6138786956663834464_n.jpg',
                                         width: 80.0,
                                         height: 80.0,
                                         fit: BoxFit.cover,
@@ -688,7 +676,7 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
                                         await launchURL(
-                                            'https://www.instagram.com/umocit63/');
+                                            'https://www.instagram.com/ufadeb63/');
                                       },
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -698,19 +686,29 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            'UMOCIT',
+                                            'UFADEB',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyLarge,
+                                                .bodyLarge
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  letterSpacing: 0.0,
+                                                ),
                                           ),
                                           Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 5.0, 0.0, 0.0),
                                             child: Text(
-                                              'União de Mulheres de Oração',
+                                              'União Feminina da Assembleia de Deus | Cidade Tiradentes',
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .labelMedium,
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                           ),
                                         ],
@@ -736,7 +734,10 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                               BoxShadow(
                                 blurRadius: 5.0,
                                 color: Color(0x520E151B),
-                                offset: Offset(0.0, 2.0),
+                                offset: Offset(
+                                  0.0,
+                                  2.0,
+                                ),
                               )
                             ],
                             borderRadius: BorderRadius.circular(8.0),
@@ -763,14 +764,14 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                             fit: BoxFit.contain,
                                           ),
                                           allowRotation: false,
-                                          tag: 'imageTag6',
+                                          tag: 'imageTag5',
                                           useHeroAnimation: true,
                                         ),
                                       ),
                                     );
                                   },
                                   child: Hero(
-                                    tag: 'imageTag6',
+                                    tag: 'imageTag5',
                                     transitionOnUserGestures: true,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(6.0),
@@ -806,12 +807,22 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                           Text(
                                             'UHDCIT',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyLarge,
+                                                .bodyLarge
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  letterSpacing: 0.0,
+                                                ),
                                           ),
                                           Text(
                                             'Departamento da União do Homens de Deus em Cidade Tiradentes',
                                             style: FlutterFlowTheme.of(context)
-                                                .labelMedium,
+                                                .labelMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  letterSpacing: 0.0,
+                                                ),
                                           ),
                                         ],
                                       ),
@@ -836,7 +847,10 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                               BoxShadow(
                                 blurRadius: 5.0,
                                 color: Color(0x520E151B),
-                                offset: Offset(0.0, 2.0),
+                                offset: Offset(
+                                  0.0,
+                                  2.0,
+                                ),
                               )
                             ],
                             borderRadius: BorderRadius.circular(8.0),
@@ -863,14 +877,14 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                             fit: BoxFit.contain,
                                           ),
                                           allowRotation: false,
-                                          tag: 'imageTag7',
+                                          tag: 'imageTag6',
                                           useHeroAnimation: true,
                                         ),
                                       ),
                                     );
                                   },
                                   child: Hero(
-                                    tag: 'imageTag7',
+                                    tag: 'imageTag6',
                                     transitionOnUserGestures: true,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(6.0),
@@ -906,7 +920,12 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                           Text(
                                             'UPCIT',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyLarge,
+                                                .bodyLarge
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  letterSpacing: 0.0,
+                                                ),
                                           ),
                                           Padding(
                                             padding:
@@ -916,7 +935,12 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                               'União de princesas em Cidade Tiradentes',
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .labelMedium,
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                           ),
                                         ],
@@ -942,7 +966,10 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                               BoxShadow(
                                 blurRadius: 5.0,
                                 color: Color(0x520E151B),
-                                offset: Offset(0.0, 2.0),
+                                offset: Offset(
+                                  0.0,
+                                  2.0,
+                                ),
                               )
                             ],
                             borderRadius: BorderRadius.circular(8.0),
@@ -969,14 +996,14 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                             fit: BoxFit.contain,
                                           ),
                                           allowRotation: false,
-                                          tag: 'imageTag8',
+                                          tag: 'imageTag7',
                                           useHeroAnimation: true,
                                         ),
                                       ),
                                     );
                                   },
                                   child: Hero(
-                                    tag: 'imageTag8',
+                                    tag: 'imageTag7',
                                     transitionOnUserGestures: true,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(6.0),
@@ -1003,16 +1030,25 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                         Text(
                                           'ATOS 1:8',
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyLarge,
+                                              .bodyLarge
+                                              .override(
+                                                fontFamily: 'Plus Jakarta Sans',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                         Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 5.0, 0.0, 0.0),
                                           child: Text(
-                                            'Departamento de Missões da Assembleia de Deus do Belem',
+                                            'Missões da Assembleia de Deus do Belem | Cidade Tiradentes',
                                             style: FlutterFlowTheme.of(context)
-                                                .labelMedium,
+                                                .labelMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  letterSpacing: 0.0,
+                                                ),
                                           ),
                                         ),
                                       ],
@@ -1037,7 +1073,10 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                               BoxShadow(
                                 blurRadius: 5.0,
                                 color: Color(0x520E151B),
-                                offset: Offset(0.0, 2.0),
+                                offset: Offset(
+                                  0.0,
+                                  2.0,
+                                ),
                               )
                             ],
                             borderRadius: BorderRadius.circular(8.0),
@@ -1064,14 +1103,14 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                             fit: BoxFit.contain,
                                           ),
                                           allowRotation: false,
-                                          tag: 'imageTag9',
+                                          tag: 'imageTag8',
                                           useHeroAnimation: true,
                                         ),
                                       ),
                                     );
                                   },
                                   child: Hero(
-                                    tag: 'imageTag9',
+                                    tag: 'imageTag8',
                                     transitionOnUserGestures: true,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(6.0),
@@ -1107,17 +1146,27 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                           Text(
                                             'EBD',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyLarge,
+                                                .bodyLarge
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  letterSpacing: 0.0,
+                                                ),
                                           ),
                                           Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 5.0, 0.0, 0.0),
                                             child: Text(
-                                              'Escola Biblica Dominical \nAD BELÉM - SETOR 63',
+                                              'Escola Biblica Dominical  | Cidade Tiradentes',
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .labelMedium,
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                           ),
                                         ],
@@ -1143,7 +1192,10 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                               BoxShadow(
                                 blurRadius: 5.0,
                                 color: Color(0x520E151B),
-                                offset: Offset(0.0, 2.0),
+                                offset: Offset(
+                                  0.0,
+                                  2.0,
+                                ),
                               )
                             ],
                             borderRadius: BorderRadius.circular(8.0),
@@ -1170,14 +1222,14 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                             fit: BoxFit.contain,
                                           ),
                                           allowRotation: false,
-                                          tag: 'imageTag10',
+                                          tag: 'imageTag9',
                                           useHeroAnimation: true,
                                         ),
                                       ),
                                     );
                                   },
                                   child: Hero(
-                                    tag: 'imageTag10',
+                                    tag: 'imageTag9',
                                     transitionOnUserGestures: true,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(6.0),
@@ -1213,7 +1265,12 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                           Text(
                                             'FAESP 63',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyLarge,
+                                                .bodyLarge
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  letterSpacing: 0.0,
+                                                ),
                                           ),
                                           Padding(
                                             padding:
@@ -1223,7 +1280,12 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                               'Faculdade Evangélica de SP - Extensão - Cidade Tiradentes',
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .labelMedium,
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                           ),
                                         ],
@@ -1249,7 +1311,10 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                               BoxShadow(
                                 blurRadius: 5.0,
                                 color: Color(0x520E151B),
-                                offset: Offset(0.0, 2.0),
+                                offset: Offset(
+                                  0.0,
+                                  2.0,
+                                ),
                               )
                             ],
                             borderRadius: BorderRadius.circular(8.0),
@@ -1276,14 +1341,14 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                             fit: BoxFit.contain,
                                           ),
                                           allowRotation: false,
-                                          tag: 'imageTag11',
+                                          tag: 'imageTag10',
                                           useHeroAnimation: true,
                                         ),
                                       ),
                                     );
                                   },
                                   child: Hero(
-                                    tag: 'imageTag11',
+                                    tag: 'imageTag10',
                                     transitionOnUserGestures: true,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(6.0),
@@ -1319,12 +1384,22 @@ class _DepartamentosIgrejaWidgetState extends State<DepartamentosIgrejaWidget>
                                           Text(
                                             'UNEMAD',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyLarge,
+                                                .bodyLarge
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  letterSpacing: 0.0,
+                                                ),
                                           ),
                                           Text(
                                             'União Nacional das Esposas\nde Ministros das Assembleias de Deus',
                                             style: FlutterFlowTheme.of(context)
-                                                .labelMedium,
+                                                .labelMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  letterSpacing: 0.0,
+                                                ),
                                           ),
                                         ],
                                       ),

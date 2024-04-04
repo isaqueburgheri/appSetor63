@@ -2,9 +2,9 @@ import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'package:map_launcher/map_launcher.dart' as $ml;
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'setor6305_castro2_model.dart';
 export 'setor6305_castro2_model.dart';
@@ -38,15 +38,6 @@ class _Setor6305Castro2WidgetState extends State<Setor6305Castro2Widget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(
@@ -75,7 +66,7 @@ class _Setor6305Castro2WidgetState extends State<Setor6305Castro2Widget> {
                     size: 30.0,
                   ),
                   onPressed: () async {
-                    context.pop();
+                    context.pushNamed('igrejas_menu');
                   },
                 ),
                 actions: const [],
@@ -114,6 +105,7 @@ class _Setor6305Castro2WidgetState extends State<Setor6305Castro2Widget> {
                                         fontFamily: 'Plus Jakarta Sans',
                                         color: const Color(0xFF101213),
                                         fontSize: 24.0,
+                                        letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                       ),
                                 ),
@@ -131,7 +123,10 @@ class _Setor6305Castro2WidgetState extends State<Setor6305Castro2Widget> {
                                     BoxShadow(
                                       blurRadius: 12.0,
                                       color: Color(0x33000000),
-                                      offset: Offset(0.0, 5.0),
+                                      offset: Offset(
+                                        0.0,
+                                        5.0,
+                                      ),
                                     )
                                   ],
                                   borderRadius: BorderRadius.circular(12.0),
@@ -203,6 +198,7 @@ class _Setor6305Castro2WidgetState extends State<Setor6305Castro2Widget> {
                                           fontFamily: 'Plus Jakarta Sans',
                                           color: const Color(0xFF101213),
                                           fontSize: 22.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.bold,
                                         ),
                                   ),
@@ -227,6 +223,7 @@ class _Setor6305Castro2WidgetState extends State<Setor6305Castro2Widget> {
                                             fontFamily: 'Plus Jakarta Sans',
                                             color: const Color(0xFF57636C),
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
                                           ),
                                     ),
@@ -249,6 +246,7 @@ class _Setor6305Castro2WidgetState extends State<Setor6305Castro2Widget> {
                                               fontFamily: 'Plus Jakarta Sans',
                                               color: const Color(0xFF57636C),
                                               fontSize: 14.0,
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.w500,
                                             ),
                                       ),
@@ -281,6 +279,7 @@ class _Setor6305Castro2WidgetState extends State<Setor6305Castro2Widget> {
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Plus Jakarta Sans',
                                     fontSize: 18.0,
+                                    letterSpacing: 0.0,
                                   ),
                         ),
                       ),
@@ -293,6 +292,7 @@ class _Setor6305Castro2WidgetState extends State<Setor6305Castro2Widget> {
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Plus Jakarta Sans',
                                     fontSize: 15.0,
+                                    letterSpacing: 0.0,
                                   ),
                         ),
                       ),
@@ -301,191 +301,153 @@ class _Setor6305Castro2WidgetState extends State<Setor6305Castro2Widget> {
                         thickness: 1.0,
                         color: Color(0xFFE0E3E7),
                       ),
-                      Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
-                        child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              16.0, 12.0, 0.0, 0.0),
-                          child: Text(
-                            'Redes Sociais',
-                            style: FlutterFlowTheme.of(context)
-                                .labelLarge
-                                .override(
-                                  fontFamily: 'Plus Jakarta Sans',
-                                  color: const Color(0xFF57636C),
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
+                      Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              'Endereço',
+                              style: FlutterFlowTheme.of(context)
+                                  .labelLarge
+                                  .override(
+                                    fontFamily: 'Plus Jakarta Sans',
+                                    color: const Color(0xFF57636C),
+                                    fontSize: 16.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                            ),
                           ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 12.0, 16.0, 12.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  2.0, 2.0, 12.0, 2.0),
-                              child: InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  await launchURL(
-                                      'https://www.youtube.com/@ADBELEM63?sub_confirmation=1');
-                                },
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(12.0),
-                                  child: Image.asset(
-                                    'assets/images/youtube.png',
-                                    width: 80.0,
-                                    height: 80.0,
-                                    fit: BoxFit.cover,
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 12.0, 16.0, 12.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      2.0, 2.0, 12.0, 2.0),
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      await launchMap(
+                                        mapType: $ml.MapType.google,
+                                        address:
+                                            'Rua Conto de Areia, 295 - Conj. Hab. Castro A, São Paulo - SP, 08474-220',
+                                        title: '',
+                                      );
+                                    },
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(12.0),
+                                      child: Image.asset(
+                                        'assets/images/icons8-google-maps-96.png',
+                                        width: 80.0,
+                                        height: 80.0,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  2.0, 2.0, 12.0, 2.0),
-                              child: InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  await launchURL(
-                                      'http://instagram.com/adbelem63/');
-                                },
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(12.0),
-                                  child: Image.asset(
-                                    'assets/images/instagram.png',
-                                    width: 80.0,
-                                    height: 80.0,
-                                    fit: BoxFit.cover,
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      2.0, 2.0, 12.0, 2.0),
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      await launchMap(
+                                        mapType: $ml.MapType.apple,
+                                        location: FFAppState().localCastro2,
+                                        title: '',
+                                      );
+                                    },
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(12.0),
+                                      child: Image.asset(
+                                        'assets/images/icons8-apple-maps-96.png',
+                                        width: 80.0,
+                                        height: 80.0,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  2.0, 2.0, 12.0, 2.0),
-                              child: InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  await launchURL(
-                                      'http://facebook.com/adbelemcidadetiradentes63/');
-                                },
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(12.0),
-                                  child: Image.asset(
-                                    'assets/images/facebook.png',
-                                    width: 80.0,
-                                    height: 80.0,
-                                    fit: BoxFit.cover,
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      2.0, 2.0, 12.0, 2.0),
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      await launchMap(
+                                        mapType: $ml.MapType.waze,
+                                        address:
+                                            'Rua Conto de Areia, 295 - Conj. Hab. Castro A, São Paulo - SP, 08474-220',
+                                        title: '',
+                                      );
+                                    },
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(12.0),
+                                      child: Image.asset(
+                                        'assets/images/icons8-waze-works-on-smartphones-and-tablet-computers-that-have-gps-support.-96.png',
+                                        width: 65.0,
+                                        height: 65.0,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
                                   ),
                                 ),
-                              ),
+                              ],
                             ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
-                        child: Text(
-                          'Endereço',
-                          style:
-                              FlutterFlowTheme.of(context).labelLarge.override(
+                          ),
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 8.0, 0.0, 0.0),
+                            child: Text(
+                              'Rua Conto de Areia, 41 - Conj. Hab. Castro A',
+                              style: FlutterFlowTheme.of(context)
+                                  .headlineSmall
+                                  .override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: const Color(0xFF57636C),
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w500,
+                                    color: const Color(0xFF101213),
+                                    fontSize: 22.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.bold,
                                   ),
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 0.0, 0.0),
-                        child: Text(
-                          'Rua Conto de Areia, 295 - Conj. Hab. Castro A',
-                          style: FlutterFlowTheme.of(context)
-                              .headlineSmall
-                              .override(
-                                fontFamily: 'Plus Jakarta Sans',
-                                color: const Color(0xFF101213),
-                                fontSize: 22.0,
-                                fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Align(
+                            alignment: const AlignmentDirectional(-1.0, 0.0),
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  16.0, 8.0, 0.0, 44.0),
+                              child: Text(
+                                'São Paulo - SP, 08474-220',
+                                style: FlutterFlowTheme.of(context)
+                                    .labelLarge
+                                    .override(
+                                      fontFamily: 'Plus Jakarta Sans',
+                                      color: const Color(0xFF57636C),
+                                      fontSize: 16.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w500,
+                                    ),
                               ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 8.0, 0.0, 44.0),
-                        child: Text(
-                          'São Paulo - SP, 08474-220',
-                          style:
-                              FlutterFlowTheme.of(context).labelLarge.override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    color: const Color(0xFF57636C),
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                        ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 12.0),
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    await launchMap(
-                      address: 'CH9W+MF São Paulo',
-                      title: '',
-                    );
-                  },
-                  child: Container(
-                    width: double.infinity,
-                    height: 50.0,
-                    decoration: BoxDecoration(
-                      color: const Color(0x4C4B39EF),
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 4.0,
-                          color: FlutterFlowTheme.of(context).primaryText,
-                          offset: const Offset(0.0, 2.0),
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(12.0),
-                      border: Border.all(
-                        color: FlutterFlowTheme.of(context).primaryText,
-                        width: 2.0,
-                      ),
-                    ),
-                    alignment: const AlignmentDirectional(0.0, 0.0),
-                    child: Text(
-                      '🗺️ Veja no mapa',
-                      style: FlutterFlowTheme.of(context).bodyLarge.override(
-                            fontFamily: 'Plus Jakarta Sans',
-                            color: Colors.white,
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w500,
-                          ),
-                    ),
                   ),
                 ),
               ),

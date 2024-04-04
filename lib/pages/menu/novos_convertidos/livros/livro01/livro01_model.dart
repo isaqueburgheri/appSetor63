@@ -7,8 +7,6 @@ class Livro01Model extends FlutterFlowModel<Livro01Widget> {
 
   final unfocusNode = FocusNode();
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -16,8 +14,4 @@ class Livro01Model extends FlutterFlowModel<Livro01Widget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

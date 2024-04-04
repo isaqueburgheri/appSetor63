@@ -3,9 +3,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:provider/provider.dart';
 import 'igrejas_menu_model.dart';
 export 'igrejas_menu_model.dart';
 
@@ -59,17 +57,6 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -96,7 +83,7 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                     size: 30.0,
                   ),
                   onPressed: () async {
-                    context.pop();
+                    context.pushNamed('main_0_menu');
                   },
                 ),
                 title: Text(
@@ -105,6 +92,7 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                         fontFamily: 'Outfit',
                         color: Colors.white,
                         fontSize: 22.0,
+                        letterSpacing: 0.0,
                       ),
                 ),
                 actions: const [],
@@ -139,6 +127,7 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                     fontFamily: 'Outfit',
                                     color: Colors.white,
                                     fontSize: 26.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
                             ),
@@ -184,7 +173,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Templo Sede - Setor 63',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -235,7 +228,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Barro Branco',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -286,7 +283,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Cachoeira da Sorte',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -337,7 +338,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Castro Alves',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -387,7 +392,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Castro 2',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -438,7 +447,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'City Conceição',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -489,7 +502,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Cohab  Etelvina',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -540,7 +557,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Conj. Prestes Maia',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -591,7 +612,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Fazenda do Carmo',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -642,7 +667,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Ferreira da Rocha',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -693,7 +722,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Inácio Monteiro',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -744,7 +777,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Jardim Palanque',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -795,7 +832,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Jardim Paulistinha',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -846,7 +887,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Jardim Pedra Branca',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -897,7 +942,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Jardim Pérola',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -948,7 +997,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Jardim Souza Ramos',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -999,7 +1052,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Jardim Vitória',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -1050,7 +1107,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Jardim Wilma Flor',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -1100,7 +1161,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Serra D”Água',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -1151,7 +1216,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Tiradentes 15 C',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -1202,7 +1271,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Tiradentes DG',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -1253,7 +1326,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Tiradentes Ferroviários',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],
@@ -1304,7 +1381,11 @@ class _IgrejasMenuWidgetState extends State<IgrejasMenuWidget>
                                         child: Text(
                                           'Vila 1° de Maio',
                                           style: FlutterFlowTheme.of(context)
-                                              .headlineSmall,
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
                                         ),
                                       ),
                                     ],

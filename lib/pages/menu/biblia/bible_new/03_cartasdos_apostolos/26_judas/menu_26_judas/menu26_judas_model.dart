@@ -7,8 +7,6 @@ class Menu26JudasModel extends FlutterFlowModel<Menu26JudasWidget> {
 
   final unfocusNode = FocusNode();
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -16,8 +14,4 @@ class Menu26JudasModel extends FlutterFlowModel<Menu26JudasWidget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

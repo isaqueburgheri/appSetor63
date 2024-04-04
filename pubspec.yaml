@@ -15,7 +15,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.2.0+25
+version: 1.4.11+47
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -26,11 +26,9 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   auto_size_text: 3.0.0
-  cached_network_image: 3.2.1
+  cached_network_image: 3.3.1
   chewie: 1.7.1
-  collection: 1.17.2
-  device_info_plus: 9.1.0
-  device_info_plus_platform_interface: 7.0.0
+  collection: 1.18.0
   expandable: 5.0.1
   file_picker: 6.1.1
   flutter_animate: 4.1.1+1
@@ -41,7 +39,7 @@ dependencies:
   font_awesome_flutter: 10.6.0
   from_css_color: 2.0.0
   go_router: 7.1.1
-  google_fonts: 4.0.3
+  google_fonts: 6.1.0
   internet_file: 1.2.0
   intl: 0.18.1
   json_path: 0.6.2
@@ -51,9 +49,10 @@ dependencies:
   path_provider_android: 2.0.25
   path_provider_foundation: 2.2.2
   path_provider_platform_interface: 2.0.6
-  pdfx: 2.3.0
+  pdfx: 2.6.0
   photo_view: 0.14.0
-  plugin_platform_interface: 2.1.6
+  plugin_platform_interface: 2.1.8
+  pointer_interceptor: 0.10.1
   provider: 6.0.5
   shared_preferences: 2.2.2
   shared_preferences_android: 2.2.1
@@ -64,20 +63,21 @@ dependencies:
   sticky_headers: 0.3.0+2
   timeago: 3.2.2
   universal_io: 2.2.2
-  url_launcher: 6.1.10
-  url_launcher_android: 6.0.27
-  url_launcher_ios: 6.1.4
-  url_launcher_platform_interface: 2.1.2
+  url_launcher: 6.2.5
+  url_launcher_android: 6.3.0
+  url_launcher_ios: 6.2.5
+  url_launcher_platform_interface: 2.3.2
+  uuid: ^4.0.0
   video_player: 2.8.1
   video_player_android: 2.4.10
   video_player_avfoundation: 2.5.1
   video_player_platform_interface: 6.2.1
   video_player_web: 2.1.2
-  webview_flutter: 4.0.5
-  webview_flutter_android: 3.3.1
-  webview_flutter_platform_interface: 2.0.2
-  webview_flutter_wkwebview: 3.1.1
-  webviewx_plus: 0.3.3
+  webview_flutter: 4.7.0
+  webview_flutter_android: 3.15.0
+  webview_flutter_platform_interface: 2.10.0
+  webview_flutter_wkwebview: 3.12.0
+  webviewx_plus: 0.5.0
   xml: 6.3.0
   youtube_player_iframe: 
     git:
@@ -91,6 +91,9 @@ dependencies:
 
 dependency_overrides:
   device_info_plus: 9.1.0
+  http: 1.2.0
+  pointer_interceptor: 0.10.1
+  uuid: ^4.0.0
 
 dev_dependencies:
   flutter_launcher_icons: 0.13.1
@@ -108,7 +111,7 @@ flutter_launcher_icons:
   remove_alpha_ios: true
   web:
     generate: true
-  image_path: 'assets/images/app_launcher_icon.png'
+  image_path: 'assets/images/app_launcher_icon.jpg'
 
 
 # For information on the generic Dart part of this file, see the
@@ -132,6 +135,7 @@ flutter:
     - assets/rive_animations/
     - assets/pdfs/
 
+  
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
@@ -157,3 +161,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+

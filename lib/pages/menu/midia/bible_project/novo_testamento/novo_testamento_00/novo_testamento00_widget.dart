@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 import 'novo_testamento00_model.dart';
 export 'novo_testamento00_model.dart';
 
@@ -35,17 +33,6 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -72,7 +59,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                     size: 30.0,
                   ),
                   onPressed: () async {
-                    context.pop();
+                    context.goNamed('biblieProject_menu');
                   },
                 ),
                 title: Text(
@@ -80,6 +67,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
                         fontFamily: 'Outfit',
                         color: Colors.white,
+                        letterSpacing: 0.0,
                       ),
                 ),
                 actions: const [],
@@ -118,6 +106,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                     fontFamily: 'Outfit',
                                     color: const Color(0xFF15161E),
                                     fontSize: 22.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
                         ),
@@ -152,7 +141,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -181,6 +173,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -220,7 +213,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -249,6 +245,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -288,7 +285,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -317,6 +317,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -356,7 +357,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -385,6 +389,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -424,7 +429,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -453,6 +461,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -492,7 +501,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -521,6 +533,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -560,7 +573,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -589,6 +605,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -628,7 +645,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -657,6 +677,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -712,6 +733,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                     fontFamily: 'Outfit',
                                     color: const Color(0xFF15161E),
                                     fontSize: 22.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
                         ),
@@ -746,7 +768,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -775,6 +800,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -814,7 +840,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -843,6 +872,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -898,6 +928,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                     fontFamily: 'Outfit',
                                     color: const Color(0xFF15161E),
                                     fontSize: 22.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
                         ),
@@ -932,7 +963,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -961,6 +995,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1000,7 +1035,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1029,6 +1067,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1068,7 +1107,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1097,6 +1139,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1136,7 +1179,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1165,6 +1211,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1204,7 +1251,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1233,6 +1283,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1272,7 +1323,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1301,6 +1355,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1340,7 +1395,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1369,6 +1427,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1408,7 +1467,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1437,6 +1499,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1476,7 +1539,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1505,6 +1571,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1544,7 +1611,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1573,6 +1643,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1612,7 +1683,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1641,6 +1715,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1680,7 +1755,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1709,6 +1787,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1748,7 +1827,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1777,6 +1859,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1816,7 +1899,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1845,6 +1931,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1884,7 +1971,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1913,6 +2003,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1952,7 +2043,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1981,6 +2075,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -2020,7 +2115,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -2049,6 +2147,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -2088,7 +2187,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -2117,6 +2219,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -2156,7 +2259,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -2185,6 +2291,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -2224,7 +2331,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -2253,6 +2363,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -2311,6 +2422,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                   fontFamily: 'Outfit',
                                   color: const Color(0xFF15161E),
                                   fontSize: 22.0,
+                                  letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
                                 ),
                           ),
@@ -2345,7 +2457,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                     BoxShadow(
                                       blurRadius: 0.0,
                                       color: Color(0xFFF1F4F8),
-                                      offset: Offset(0.0, 1.0),
+                                      offset: Offset(
+                                        0.0,
+                                        1.0,
+                                      ),
                                     )
                                   ],
                                   borderRadius: BorderRadius.circular(0.0),
@@ -2376,6 +2491,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                       'Plus Jakarta Sans',
                                                   color: const Color(0xFF15161E),
                                                   fontSize: 16.0,
+                                                  letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                           ),
@@ -2415,7 +2531,10 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                     BoxShadow(
                                       blurRadius: 0.0,
                                       color: Color(0xFFF1F4F8),
-                                      offset: Offset(0.0, 1.0),
+                                      offset: Offset(
+                                        0.0,
+                                        1.0,
+                                      ),
                                     )
                                   ],
                                   borderRadius: BorderRadius.circular(0.0),
@@ -2446,6 +2565,7 @@ class _NovoTestamento00WidgetState extends State<NovoTestamento00Widget> {
                                                       'Plus Jakarta Sans',
                                                   color: const Color(0xFF15161E),
                                                   fontSize: 16.0,
+                                                  letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                           ),

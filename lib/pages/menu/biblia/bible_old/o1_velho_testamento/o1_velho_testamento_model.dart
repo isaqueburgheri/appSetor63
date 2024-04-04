@@ -7,8 +7,6 @@ class O1VelhoTestamentoModel extends FlutterFlowModel<O1VelhoTestamentoWidget> {
 
   final unfocusNode = FocusNode();
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -16,8 +14,4 @@ class O1VelhoTestamentoModel extends FlutterFlowModel<O1VelhoTestamentoWidget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

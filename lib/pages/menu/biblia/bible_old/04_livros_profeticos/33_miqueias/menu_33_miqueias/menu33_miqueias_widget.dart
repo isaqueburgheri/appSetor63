@@ -4,9 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:provider/provider.dart';
 import 'menu33_miqueias_model.dart';
 export 'menu33_miqueias_model.dart';
 
@@ -60,17 +58,6 @@ class _Menu33MiqueiasWidgetState extends State<Menu33MiqueiasWidget>
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -106,6 +93,7 @@ class _Menu33MiqueiasWidgetState extends State<Menu33MiqueiasWidget>
                         fontFamily: 'Outfit',
                         color: Colors.white,
                         fontSize: 22.0,
+                        letterSpacing: 0.0,
                       ),
                 ),
                 actions: const [],
@@ -147,6 +135,7 @@ class _Menu33MiqueiasWidgetState extends State<Menu33MiqueiasWidget>
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: Colors.black,
                                     fontSize: 20.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w800,
                                   ),
                           elevation: 3.0,
@@ -173,6 +162,7 @@ class _Menu33MiqueiasWidgetState extends State<Menu33MiqueiasWidget>
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: Colors.black,
                                     fontSize: 20.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w800,
                                   ),
                           elevation: 3.0,
@@ -199,6 +189,7 @@ class _Menu33MiqueiasWidgetState extends State<Menu33MiqueiasWidget>
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: Colors.black,
                                     fontSize: 20.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w800,
                                   ),
                           elevation: 3.0,
@@ -225,6 +216,7 @@ class _Menu33MiqueiasWidgetState extends State<Menu33MiqueiasWidget>
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: Colors.black,
                                     fontSize: 20.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w800,
                                   ),
                           elevation: 3.0,
@@ -251,6 +243,7 @@ class _Menu33MiqueiasWidgetState extends State<Menu33MiqueiasWidget>
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: Colors.black,
                                     fontSize: 20.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w800,
                                   ),
                           elevation: 3.0,
@@ -277,6 +270,7 @@ class _Menu33MiqueiasWidgetState extends State<Menu33MiqueiasWidget>
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: Colors.black,
                                     fontSize: 20.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w800,
                                   ),
                           elevation: 3.0,
@@ -303,6 +297,7 @@ class _Menu33MiqueiasWidgetState extends State<Menu33MiqueiasWidget>
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: Colors.black,
                                     fontSize: 20.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w800,
                                   ),
                           elevation: 3.0,

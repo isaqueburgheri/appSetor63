@@ -29,8 +29,6 @@ class PedidosOracaoModel extends FlutterFlowModel<PedidosOracaoWidget> {
   TextEditingController? textIgrejaController;
   String? Function(BuildContext, String?)? textIgrejaControllerValidator;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {
     textFieldEmailControllerValidator = _textFieldEmailControllerValidator;
@@ -48,8 +46,4 @@ class PedidosOracaoModel extends FlutterFlowModel<PedidosOracaoWidget> {
     textIgrejaFocusNode?.dispose();
     textIgrejaController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

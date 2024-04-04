@@ -3,15 +3,9 @@ import 'lucas10_widget.dart' show Lucas10Widget;
 import 'package:flutter/material.dart';
 
 class Lucas10Model extends FlutterFlowModel<Lucas10Widget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

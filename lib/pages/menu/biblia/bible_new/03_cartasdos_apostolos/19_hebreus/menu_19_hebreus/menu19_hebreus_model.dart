@@ -7,8 +7,6 @@ class Menu19HebreusModel extends FlutterFlowModel<Menu19HebreusWidget> {
 
   final unfocusNode = FocusNode();
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -16,8 +14,4 @@ class Menu19HebreusModel extends FlutterFlowModel<Menu19HebreusWidget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

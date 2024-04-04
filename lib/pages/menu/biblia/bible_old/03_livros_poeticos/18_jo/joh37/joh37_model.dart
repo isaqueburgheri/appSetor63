@@ -3,15 +3,9 @@ import 'joh37_widget.dart' show Joh37Widget;
 import 'package:flutter/material.dart';
 
 class Joh37Model extends FlutterFlowModel<Joh37Widget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

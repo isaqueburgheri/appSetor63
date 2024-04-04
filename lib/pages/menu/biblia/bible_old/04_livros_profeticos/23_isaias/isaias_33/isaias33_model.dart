@@ -3,15 +3,9 @@ import 'isaias33_widget.dart' show Isaias33Widget;
 import 'package:flutter/material.dart';
 
 class Isaias33Model extends FlutterFlowModel<Isaias33Widget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

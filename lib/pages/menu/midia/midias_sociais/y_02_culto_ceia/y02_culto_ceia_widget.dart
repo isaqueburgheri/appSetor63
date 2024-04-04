@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_web_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 import 'y02_culto_ceia_model.dart';
 export 'y02_culto_ceia_model.dart';
 
@@ -35,17 +33,6 @@ class _Y02CultoCeiaWidgetState extends State<Y02CultoCeiaWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
@@ -68,7 +55,7 @@ class _Y02CultoCeiaWidgetState extends State<Y02CultoCeiaWidget> {
                   size: 30.0,
                 ),
                 onPressed: () async {
-                  context.pop();
+                  context.pushNamed('midia_menu');
                 },
               ),
               title: Text(
@@ -77,6 +64,7 @@ class _Y02CultoCeiaWidgetState extends State<Y02CultoCeiaWidget> {
                       fontFamily: 'Outfit',
                       color: Colors.white,
                       fontSize: 22.0,
+                      letterSpacing: 0.0,
                     ),
               ),
               actions: const [],

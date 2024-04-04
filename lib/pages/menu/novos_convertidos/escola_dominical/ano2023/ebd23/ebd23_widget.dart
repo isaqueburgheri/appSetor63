@@ -5,9 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:provider/provider.dart';
 import 'ebd23_model.dart';
 export 'ebd23_model.dart';
 
@@ -92,17 +90,6 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -138,6 +125,7 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                         fontFamily: 'Outfit',
                         color: Colors.white,
                         fontSize: 22.0,
+                        letterSpacing: 0.0,
                       ),
                 ),
                 actions: const [],
@@ -196,6 +184,7 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                           .override(
                                             fontFamily: 'Plus Jakarta Sans',
                                             fontSize: 11.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
                                           ),
                                       unselectedLabelStyle: const TextStyle(),
@@ -270,6 +259,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -295,6 +286,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -327,6 +320,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -432,6 +427,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -457,6 +454,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -489,6 +488,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -594,6 +595,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -619,6 +622,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -651,6 +656,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -756,6 +763,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -781,6 +790,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -813,6 +824,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -918,6 +931,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -943,6 +958,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -975,6 +992,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -1080,6 +1099,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -1105,6 +1126,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -1137,6 +1160,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -1242,6 +1267,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -1267,6 +1294,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -1299,6 +1328,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -1404,6 +1435,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -1429,6 +1462,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -1461,6 +1496,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -1566,6 +1603,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -1591,6 +1630,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -1623,6 +1664,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -1728,6 +1771,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -1753,6 +1798,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -1785,6 +1832,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -1885,8 +1934,10 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                         blurRadius: 7.0,
                                                         color:
                                                             Color(0x32171717),
-                                                        offset:
-                                                            Offset(0.0, 3.0),
+                                                        offset: Offset(
+                                                          0.0,
+                                                          3.0,
+                                                        ),
                                                       )
                                                     ],
                                                     borderRadius:
@@ -1947,6 +1998,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                             0xFF0F1113),
                                                                         fontSize:
                                                                             13.0,
+                                                                        letterSpacing:
+                                                                            0.0,
                                                                         fontWeight:
                                                                             FontWeight.w500,
                                                                       ),
@@ -1970,6 +2023,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                               const Color(0xFF57636C),
                                                                           fontSize:
                                                                               14.0,
+                                                                          letterSpacing:
+                                                                              0.0,
                                                                           fontWeight:
                                                                               FontWeight.w500,
                                                                         ),
@@ -2011,8 +2066,10 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                         blurRadius: 7.0,
                                                         color:
                                                             Color(0x32171717),
-                                                        offset:
-                                                            Offset(0.0, 3.0),
+                                                        offset: Offset(
+                                                          0.0,
+                                                          3.0,
+                                                        ),
                                                       )
                                                     ],
                                                     borderRadius:
@@ -2073,6 +2130,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                             0xFF0F1113),
                                                                         fontSize:
                                                                             13.0,
+                                                                        letterSpacing:
+                                                                            0.0,
                                                                         fontWeight:
                                                                             FontWeight.w500,
                                                                       ),
@@ -2096,6 +2155,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                               const Color(0xFF57636C),
                                                                           fontSize:
                                                                               14.0,
+                                                                          letterSpacing:
+                                                                              0.0,
                                                                           fontWeight:
                                                                               FontWeight.w500,
                                                                         ),
@@ -2155,6 +2216,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -2180,6 +2243,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -2212,6 +2277,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -2317,6 +2384,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -2342,6 +2411,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -2374,6 +2445,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -2479,6 +2552,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -2504,6 +2579,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -2536,6 +2613,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -2641,6 +2720,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -2666,6 +2747,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -2698,6 +2781,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -2803,6 +2888,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -2828,6 +2915,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -2860,6 +2949,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -2965,6 +3056,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -2990,6 +3083,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -3022,6 +3117,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -3145,6 +3242,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -3170,6 +3269,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -3202,6 +3303,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -3307,6 +3410,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -3332,6 +3437,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -3364,6 +3471,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -3469,6 +3578,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -3494,6 +3605,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -3526,6 +3639,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -3632,6 +3747,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -3657,6 +3774,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         20.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
@@ -3689,6 +3808,8 @@ class _Ebd23WidgetState extends State<Ebd23Widget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,

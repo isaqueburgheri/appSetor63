@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -77,15 +76,6 @@ class _MenuSugestoesWidgetState extends State<MenuSugestoesWidget>
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(
@@ -114,7 +104,7 @@ class _MenuSugestoesWidgetState extends State<MenuSugestoesWidget>
                     size: 30.0,
                   ),
                   onPressed: () async {
-                    context.pop();
+                    context.pushNamed('main_0_menu');
                   },
                 ),
                 title: Text(
@@ -123,6 +113,7 @@ class _MenuSugestoesWidgetState extends State<MenuSugestoesWidget>
                         fontFamily: 'Outfit',
                         color: Colors.white,
                         fontSize: 22.0,
+                        letterSpacing: 0.0,
                       ),
                 ),
                 actions: const [],
@@ -174,11 +165,16 @@ class _MenuSugestoesWidgetState extends State<MenuSugestoesWidget>
                               child: TextFormField(
                                 controller: _model.textFieldEmailController,
                                 focusNode: _model.textFieldEmailFocusNode,
+                                autofocus: false,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelText: 'Diga-nos o que você pensa!',
-                                  hintStyle:
-                                      FlutterFlowTheme.of(context).bodyLarge,
+                                  hintStyle: FlutterFlowTheme.of(context)
+                                      .bodyLarge
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        letterSpacing: 0.0,
+                                      ),
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: const BorderSide(
                                       color: Color(0xFFE5E7EB),
@@ -208,9 +204,15 @@ class _MenuSugestoesWidgetState extends State<MenuSugestoesWidget>
                                     borderRadius: BorderRadius.circular(10.0),
                                   ),
                                 ),
-                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Plus Jakarta Sans',
+                                      letterSpacing: 0.0,
+                                    ),
                                 textAlign: TextAlign.start,
                                 maxLines: 10,
+                                minLines: null,
                                 validator: _model
                                     .textFieldEmailControllerValidator
                                     .asValidator(context),
@@ -251,6 +253,7 @@ class _MenuSugestoesWidgetState extends State<MenuSugestoesWidget>
                                     .override(
                                       fontFamily: 'Plus Jakarta Sans',
                                       color: Colors.white,
+                                      letterSpacing: 0.0,
                                     ),
                                 elevation: 0.0,
                                 borderRadius: BorderRadius.circular(10.0),
@@ -271,6 +274,7 @@ class _MenuSugestoesWidgetState extends State<MenuSugestoesWidget>
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: const Color(0xFF101213),
                                     fontSize: 24.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
                             ),
@@ -284,6 +288,7 @@ class _MenuSugestoesWidgetState extends State<MenuSugestoesWidget>
                             child: TextFormField(
                               controller: _model.textFieldNomeController,
                               focusNode: _model.textFieldNomeFocusNode,
+                              autofocus: false,
                               obscureText: false,
                               decoration: InputDecoration(
                                 labelText: 'Seu nome',
@@ -291,10 +296,15 @@ class _MenuSugestoesWidgetState extends State<MenuSugestoesWidget>
                                     .labelMedium
                                     .override(
                                       fontFamily: 'Plus Jakarta Sans',
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
                                     ),
-                                hintStyle:
-                                    FlutterFlowTheme.of(context).labelMedium,
+                                hintStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Plus Jakarta Sans',
+                                      letterSpacing: 0.0,
+                                    ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: const BorderSide(
                                     color: Color(0xFFE5E7EB),
@@ -326,7 +336,13 @@ class _MenuSugestoesWidgetState extends State<MenuSugestoesWidget>
                                 contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 12.0, 16.0, 12.0),
                               ),
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Plus Jakarta Sans',
+                                    letterSpacing: 0.0,
+                                  ),
+                              minLines: null,
                               cursorColor: FlutterFlowTheme.of(context).primary,
                               validator: _model.textFieldNomeControllerValidator
                                   .asValidator(context),

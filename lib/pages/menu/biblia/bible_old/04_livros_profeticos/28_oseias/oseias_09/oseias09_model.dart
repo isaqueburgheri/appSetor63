@@ -3,15 +3,9 @@ import 'oseias09_widget.dart' show Oseias09Widget;
 import 'package:flutter/material.dart';
 
 class Oseias09Model extends FlutterFlowModel<Oseias09Widget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

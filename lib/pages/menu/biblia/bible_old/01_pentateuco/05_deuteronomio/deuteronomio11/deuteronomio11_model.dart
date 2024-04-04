@@ -3,15 +3,9 @@ import 'deuteronomio11_widget.dart' show Deuteronomio11Widget;
 import 'package:flutter/material.dart';
 
 class Deuteronomio11Model extends FlutterFlowModel<Deuteronomio11Widget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

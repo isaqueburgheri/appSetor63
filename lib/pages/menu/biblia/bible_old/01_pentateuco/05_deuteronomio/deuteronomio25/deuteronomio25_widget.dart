@@ -5,8 +5,6 @@ import '/flutter_flow/flutter_flow_web_view.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 import 'deuteronomio25_model.dart';
 export 'deuteronomio25_model.dart';
 
@@ -42,17 +40,6 @@ class _Deuteronomio25WidgetState extends State<Deuteronomio25Widget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
@@ -86,6 +73,7 @@ class _Deuteronomio25WidgetState extends State<Deuteronomio25Widget> {
                         fontFamily: 'Outfit',
                         color: Colors.white,
                         fontSize: 22.0,
+                        letterSpacing: 0.0,
                       ),
                 ),
               ),

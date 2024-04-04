@@ -7,8 +7,6 @@ class Menu21EclModel extends FlutterFlowModel<Menu21EclWidget> {
 
   final unfocusNode = FocusNode();
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -16,8 +14,4 @@ class Menu21EclModel extends FlutterFlowModel<Menu21EclWidget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

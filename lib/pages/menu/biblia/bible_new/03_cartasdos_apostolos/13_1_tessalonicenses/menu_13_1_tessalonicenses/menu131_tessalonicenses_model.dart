@@ -8,8 +8,6 @@ class Menu131TessalonicensesModel
 
   final unfocusNode = FocusNode();
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -17,8 +15,4 @@ class Menu131TessalonicensesModel
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

@@ -3,15 +3,9 @@ import 'daniel08_widget.dart' show Daniel08Widget;
 import 'package:flutter/material.dart';
 
 class Daniel08Model extends FlutterFlowModel<Daniel08Widget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

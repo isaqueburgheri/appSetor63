@@ -4,15 +4,9 @@ import 'package:flutter/material.dart';
 
 class NovoTestamento02MtModel
     extends FlutterFlowModel<NovoTestamento02MtWidget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

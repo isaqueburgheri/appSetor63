@@ -94,6 +94,7 @@ class _MyAppState extends State<MyApp> {
           }),
           minThumbLength: 20.0,
         ),
+        useMaterial3: false,
       ),
       themeMode: _themeMode,
       routerConfig: _router,
@@ -136,6 +137,7 @@ class _NavBarPageState extends State<NavBarPage> {
       bottomNavigationBar: Visibility(
         visible: responsiveVisibility(
           context: context,
+          tablet: false,
           tabletLandscape: false,
           desktop: false,
         ),

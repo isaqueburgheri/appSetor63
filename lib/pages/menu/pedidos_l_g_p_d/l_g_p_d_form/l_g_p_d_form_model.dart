@@ -39,8 +39,6 @@ class LGPDFormModel extends FlutterFlowModel<LGPDFormWidget> {
   // State field(s) for Expandable widget.
   late ExpandableController expandableController;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {
     lGPDnomeControllerValidator = _lGPDnomeControllerValidator;
@@ -61,8 +59,4 @@ class LGPDFormModel extends FlutterFlowModel<LGPDFormWidget> {
 
     expandableController.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

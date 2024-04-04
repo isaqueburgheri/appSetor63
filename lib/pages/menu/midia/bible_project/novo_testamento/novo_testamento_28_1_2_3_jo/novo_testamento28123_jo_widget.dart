@@ -2,8 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_youtube_player.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 import 'novo_testamento28123_jo_model.dart';
 export 'novo_testamento28123_jo_model.dart';
 
@@ -36,17 +34,6 @@ class _NovoTestamento28123JoWidgetState
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: Colors.white,
@@ -78,6 +65,7 @@ class _NovoTestamento28123JoWidgetState
                       fontFamily: 'Outfit',
                       color: const Color(0xFF0F1113),
                       fontSize: 24.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                     ),
               ),
@@ -111,6 +99,7 @@ class _NovoTestamento28123JoWidgetState
                           fontFamily: 'Outfit',
                           color: const Color(0xFF0F1113),
                           fontSize: 24.0,
+                          letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
                         ),
                   ),
@@ -120,6 +109,7 @@ class _NovoTestamento28123JoWidgetState
                           fontFamily: 'Outfit',
                           color: const Color(0xFF57636C),
                           fontSize: 16.0,
+                          letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
                         ),
                   ),

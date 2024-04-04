@@ -7,8 +7,6 @@ class Menu38ZacarModel extends FlutterFlowModel<Menu38ZacarWidget> {
 
   final unfocusNode = FocusNode();
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -16,8 +14,4 @@ class Menu38ZacarModel extends FlutterFlowModel<Menu38ZacarWidget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'side_nav_main_model.dart';
 export 'side_nav_main_model.dart';
 
@@ -41,8 +40,6 @@ class _SideNavMainWidgetState extends State<SideNavMainWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Visibility(
       visible: responsiveVisibility(
         context: context,
@@ -60,7 +57,10 @@ class _SideNavMainWidgetState extends State<SideNavMainWidget> {
               BoxShadow(
                 blurRadius: 0.0,
                 color: FlutterFlowTheme.of(context).accent1,
-                offset: const Offset(2.0, 0.0),
+                offset: const Offset(
+                  2.0,
+                  0.0,
+                ),
               )
             ],
             borderRadius: BorderRadius.circular(0.0),
@@ -80,7 +80,10 @@ class _SideNavMainWidgetState extends State<SideNavMainWidget> {
                       boxShadow: [
                         BoxShadow(
                           color: FlutterFlowTheme.of(context).accent1,
-                          offset: const Offset(0.0, 1.0),
+                          offset: const Offset(
+                            0.0,
+                            1.0,
+                          ),
                         )
                       ],
                     ),
@@ -105,6 +108,7 @@ class _SideNavMainWidgetState extends State<SideNavMainWidget> {
                                           fontFamily: 'Outfit',
                                           color:
                                               FlutterFlowTheme.of(context).info,
+                                          letterSpacing: 0.0,
                                         ),
                                   ),
                                 ),
@@ -192,6 +196,7 @@ class _SideNavMainWidgetState extends State<SideNavMainWidget> {
                                     .override(
                                       fontFamily: 'Plus Jakarta Sans',
                                       color: FlutterFlowTheme.of(context).info,
+                                      letterSpacing: 0.0,
                                     ),
                               ),
                             ),
@@ -254,6 +259,7 @@ class _SideNavMainWidgetState extends State<SideNavMainWidget> {
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: FlutterFlowTheme.of(context).info,
+                                    letterSpacing: 0.0,
                                   ),
                             ),
                           ),
@@ -315,6 +321,7 @@ class _SideNavMainWidgetState extends State<SideNavMainWidget> {
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: FlutterFlowTheme.of(context).info,
+                                    letterSpacing: 0.0,
                                   ),
                             ),
                           ),
@@ -376,6 +383,7 @@ class _SideNavMainWidgetState extends State<SideNavMainWidget> {
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: FlutterFlowTheme.of(context).info,
+                                    letterSpacing: 0.0,
                                   ),
                             ),
                           ),

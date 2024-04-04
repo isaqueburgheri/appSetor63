@@ -45,6 +45,10 @@
 
 	<key>NSLocationWhenInUseUsageDescription</key>
     <string>Necessário para localizar o dispositivo e traçar uma rota até o local desejado.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+    <string>Acessar a galeria para salvar fotos</string>
+	<key>PermissionGroupNotification</key>
+    <string>Receba notificações</string>
 
     <key>LSApplicationQueriesSchemes</key>
     <array>

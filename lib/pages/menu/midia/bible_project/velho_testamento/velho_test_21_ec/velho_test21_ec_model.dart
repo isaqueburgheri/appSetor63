@@ -3,15 +3,9 @@ import 'velho_test21_ec_widget.dart' show VelhoTest21EcWidget;
 import 'package:flutter/material.dart';
 
 class VelhoTest21EcModel extends FlutterFlowModel<VelhoTest21EcWidget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

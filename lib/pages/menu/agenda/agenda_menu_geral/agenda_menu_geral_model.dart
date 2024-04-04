@@ -7,8 +7,6 @@ class AgendaMenuGeralModel extends FlutterFlowModel<AgendaMenuGeralWidget> {
 
   final unfocusNode = FocusNode();
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -16,8 +14,4 @@ class AgendaMenuGeralModel extends FlutterFlowModel<AgendaMenuGeralWidget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

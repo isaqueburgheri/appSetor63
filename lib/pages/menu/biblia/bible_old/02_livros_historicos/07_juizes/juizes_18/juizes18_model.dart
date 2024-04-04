@@ -3,15 +3,9 @@ import 'juizes18_widget.dart' show Juizes18Widget;
 import 'package:flutter/material.dart';
 
 class Juizes18Model extends FlutterFlowModel<Juizes18Widget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

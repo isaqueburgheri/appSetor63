@@ -7,8 +7,6 @@ class Menu07Corintios1Model extends FlutterFlowModel<Menu07Corintios1Widget> {
 
   final unfocusNode = FocusNode();
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -16,8 +14,4 @@ class Menu07Corintios1Model extends FlutterFlowModel<Menu07Corintios1Widget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

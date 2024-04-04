@@ -7,8 +7,6 @@ class Menu33MiqueiasModel extends FlutterFlowModel<Menu33MiqueiasWidget> {
 
   final unfocusNode = FocusNode();
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -16,8 +14,4 @@ class Menu33MiqueiasModel extends FlutterFlowModel<Menu33MiqueiasWidget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

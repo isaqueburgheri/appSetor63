@@ -3,15 +3,9 @@ import 'numeros08_widget.dart' show Numeros08Widget;
 import 'package:flutter/material.dart';
 
 class Numeros08Model extends FlutterFlowModel<Numeros08Widget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

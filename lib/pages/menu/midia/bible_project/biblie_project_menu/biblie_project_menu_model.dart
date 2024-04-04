@@ -10,8 +10,6 @@ class BiblieProjectMenuModel extends FlutterFlowModel<BiblieProjectMenuWidget> {
   // State field(s) for Expandable widget.
   late ExpandableController expandableController;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -20,8 +18,4 @@ class BiblieProjectMenuModel extends FlutterFlowModel<BiblieProjectMenuWidget> {
     unfocusNode.dispose();
     expandableController.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

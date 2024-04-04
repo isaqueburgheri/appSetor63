@@ -3,15 +3,9 @@ import 'marcos16_widget.dart' show Marcos16Widget;
 import 'package:flutter/material.dart';
 
 class Marcos16Model extends FlutterFlowModel<Marcos16Widget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

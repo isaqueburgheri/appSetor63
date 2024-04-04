@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 import 'o2_novo_testamento_model.dart';
 export 'o2_novo_testamento_model.dart';
 
@@ -35,17 +33,6 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -80,6 +67,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
                         fontFamily: 'Outfit',
                         color: Colors.white,
+                        letterSpacing: 0.0,
                       ),
                 ),
                 actions: const [],
@@ -118,6 +106,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                     fontFamily: 'Outfit',
                                     color: const Color(0xFF15161E),
                                     fontSize: 22.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
                         ),
@@ -152,7 +141,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -181,6 +173,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -219,7 +212,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -248,6 +244,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -286,7 +283,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -315,6 +315,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -353,7 +354,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -382,6 +386,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -436,6 +441,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                     fontFamily: 'Outfit',
                                     color: const Color(0xFF15161E),
                                     fontSize: 22.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
                         ),
@@ -470,7 +476,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -499,6 +508,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -553,6 +563,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                     fontFamily: 'Outfit',
                                     color: const Color(0xFF15161E),
                                     fontSize: 22.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
                         ),
@@ -587,7 +598,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -616,6 +630,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -654,7 +669,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -683,6 +701,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -721,7 +740,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -750,6 +772,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -788,7 +811,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -817,6 +843,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -855,7 +882,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -884,6 +914,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -922,7 +953,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -951,6 +985,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -989,7 +1024,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1018,6 +1056,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1056,7 +1095,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1085,6 +1127,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1124,7 +1167,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1153,6 +1199,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1192,7 +1239,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1221,6 +1271,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1259,7 +1310,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1288,6 +1342,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1326,7 +1381,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1355,6 +1413,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1393,7 +1452,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1422,6 +1484,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1460,7 +1523,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1489,6 +1555,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1527,7 +1594,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1556,6 +1626,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1594,7 +1665,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1623,6 +1697,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1661,7 +1736,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1690,6 +1768,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1728,7 +1807,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1757,6 +1839,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1795,7 +1878,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1824,6 +1910,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1862,7 +1949,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1891,6 +1981,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -1929,7 +2020,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   BoxShadow(
                                     blurRadius: 0.0,
                                     color: Color(0xFFF1F4F8),
-                                    offset: Offset(0.0, 1.0),
+                                    offset: Offset(
+                                      0.0,
+                                      1.0,
+                                    ),
                                   )
                                 ],
                                 borderRadius: BorderRadius.circular(0.0),
@@ -1958,6 +2052,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                 fontFamily: 'Plus Jakarta Sans',
                                                 color: const Color(0xFF15161E),
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),
@@ -2015,6 +2110,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                   fontFamily: 'Outfit',
                                   color: const Color(0xFF15161E),
                                   fontSize: 22.0,
+                                  letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
                                 ),
                           ),
@@ -2049,7 +2145,10 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                     BoxShadow(
                                       blurRadius: 0.0,
                                       color: Color(0xFFF1F4F8),
-                                      offset: Offset(0.0, 1.0),
+                                      offset: Offset(
+                                        0.0,
+                                        1.0,
+                                      ),
                                     )
                                   ],
                                   borderRadius: BorderRadius.circular(0.0),
@@ -2080,6 +2179,7 @@ class _O2NovoTestamentoWidgetState extends State<O2NovoTestamentoWidget> {
                                                       'Plus Jakarta Sans',
                                                   color: const Color(0xFF15161E),
                                                   fontSize: 16.0,
+                                                  letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                           ),

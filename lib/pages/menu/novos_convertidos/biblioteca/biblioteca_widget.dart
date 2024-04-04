@@ -5,9 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:provider/provider.dart';
 import 'biblioteca_model.dart';
 export 'biblioteca_model.dart';
 
@@ -124,17 +122,6 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -170,6 +157,7 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                         fontFamily: 'Outfit',
                         color: Colors.white,
                         fontSize: 22.0,
+                        letterSpacing: 0.0,
                       ),
                 ),
                 actions: const [],
@@ -192,7 +180,7 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                   alignment: const AlignmentDirectional(0.0, -1.0),
                   children: [
                     Align(
-                      alignment: const AlignmentDirectional(0.0, -0.99),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -209,10 +197,10 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                             topRight: Radius.circular(0.0),
                           ),
                           child: Image.asset(
-                            'assets/images/ADlogo2023.jpg',
+                            'assets/images/y_culto.jpg',
                             width: double.infinity,
                             height: 240.0,
-                            fit: BoxFit.fitWidth,
+                            fit: BoxFit.scaleDown,
                           ),
                         ),
                       ),
@@ -234,6 +222,7 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                     .override(
                                       fontFamily: 'Plus Jakarta Sans',
                                       fontSize: 13.0,
+                                      letterSpacing: 0.0,
                                     ),
                                 unselectedLabelStyle: const TextStyle(),
                                 indicatorColor: const Color(0xFF0F1113),
@@ -297,6 +286,7 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                           color:
                                                               const Color(0xFF827AE1),
                                                           fontSize: 12.0,
+                                                          letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
                                                         ),
@@ -308,20 +298,20 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                 0.0, 8.0),
                                                     child: Text(
                                                       'Revista Discipulando - Ciclo 1',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .headlineSmall
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Outfit',
-                                                                color: const Color(
-                                                                    0xFF0F1113),
-                                                                fontSize: 20.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                              ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .headlineSmall
+                                                          .override(
+                                                            fontFamily:
+                                                                'Outfit',
+                                                            color: const Color(
+                                                                0xFF0F1113),
+                                                            fontSize: 20.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                          ),
                                                     ),
                                                   ),
                                                   InkWell(
@@ -348,6 +338,7 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                             color: const Color(
                                                                 0xFF0F1113),
                                                             fontSize: 15.0,
+                                                            letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w500,
                                                           ),
@@ -430,6 +421,7 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                           color:
                                                               const Color(0xFF827AE1),
                                                           fontSize: 12.0,
+                                                          letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
                                                         ),
@@ -441,20 +433,20 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                 0.0, 8.0),
                                                     child: Text(
                                                       'Revista Discipulando - Ciclo 2',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .headlineSmall
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Outfit',
-                                                                color: const Color(
-                                                                    0xFF0F1113),
-                                                                fontSize: 20.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                              ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .headlineSmall
+                                                          .override(
+                                                            fontFamily:
+                                                                'Outfit',
+                                                            color: const Color(
+                                                                0xFF0F1113),
+                                                            fontSize: 20.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                          ),
                                                     ),
                                                   ),
                                                   InkWell(
@@ -481,6 +473,7 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                             color: const Color(
                                                                 0xFF0F1113),
                                                             fontSize: 15.0,
+                                                            letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w500,
                                                           ),
@@ -563,6 +556,7 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                           color:
                                                               const Color(0xFF827AE1),
                                                           fontSize: 12.0,
+                                                          letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
                                                         ),
@@ -574,20 +568,20 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                 0.0, 8.0),
                                                     child: Text(
                                                       'Revista Discipulando - Ciclo 3',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .headlineSmall
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Outfit',
-                                                                color: const Color(
-                                                                    0xFF0F1113),
-                                                                fontSize: 20.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                              ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .headlineSmall
+                                                          .override(
+                                                            fontFamily:
+                                                                'Outfit',
+                                                            color: const Color(
+                                                                0xFF0F1113),
+                                                            fontSize: 20.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                          ),
                                                     ),
                                                   ),
                                                   InkWell(
@@ -614,6 +608,7 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                             color: const Color(
                                                                 0xFF0F1113),
                                                             fontSize: 15.0,
+                                                            letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w500,
                                                           ),
@@ -696,6 +691,7 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                           color:
                                                               const Color(0xFF827AE1),
                                                           fontSize: 12.0,
+                                                          letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
                                                         ),
@@ -707,20 +703,20 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                 0.0, 8.0),
                                                     child: Text(
                                                       'Revista Discipulando - Ciclo 4',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .headlineSmall
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Outfit',
-                                                                color: const Color(
-                                                                    0xFF0F1113),
-                                                                fontSize: 20.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                              ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .headlineSmall
+                                                          .override(
+                                                            fontFamily:
+                                                                'Outfit',
+                                                            color: const Color(
+                                                                0xFF0F1113),
+                                                            fontSize: 20.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                          ),
                                                     ),
                                                   ),
                                                   InkWell(
@@ -747,6 +743,7 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                             color: const Color(
                                                                 0xFF0F1113),
                                                             fontSize: 15.0,
+                                                            letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w500,
                                                           ),
@@ -829,6 +826,7 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                           color:
                                                               const Color(0xFF827AE1),
                                                           fontSize: 12.0,
+                                                          letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
                                                         ),
@@ -840,20 +838,20 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                 0.0, 8.0),
                                                     child: Text(
                                                       'Lições Bíblicas: Discipulado',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .headlineSmall
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Outfit',
-                                                                color: const Color(
-                                                                    0xFF0F1113),
-                                                                fontSize: 20.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                              ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .headlineSmall
+                                                          .override(
+                                                            fontFamily:
+                                                                'Outfit',
+                                                            color: const Color(
+                                                                0xFF0F1113),
+                                                            fontSize: 20.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                          ),
                                                     ),
                                                   ),
                                                   InkWell(
@@ -880,6 +878,7 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                             color: const Color(
                                                                 0xFF0F1113),
                                                             fontSize: 15.0,
+                                                            letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w500,
                                                           ),
@@ -969,7 +968,10 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                   BoxShadow(
                                                     blurRadius: 7.0,
                                                     color: Color(0x32171717),
-                                                    offset: Offset(0.0, 3.0),
+                                                    offset: Offset(
+                                                      0.0,
+                                                      3.0,
+                                                    ),
                                                   )
                                                 ],
                                                 borderRadius:
@@ -1025,6 +1027,8 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         13.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -1050,6 +1054,8 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .w500,
@@ -1087,7 +1093,10 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                   BoxShadow(
                                                     blurRadius: 7.0,
                                                     color: Color(0x32171717),
-                                                    offset: Offset(0.0, 3.0),
+                                                    offset: Offset(
+                                                      0.0,
+                                                      3.0,
+                                                    ),
                                                   )
                                                 ],
                                                 borderRadius:
@@ -1143,6 +1152,8 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         13.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -1168,6 +1179,8 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .w500,
@@ -1219,7 +1232,10 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                   BoxShadow(
                                                     blurRadius: 7.0,
                                                     color: Color(0x32171717),
-                                                    offset: Offset(0.0, 3.0),
+                                                    offset: Offset(
+                                                      0.0,
+                                                      3.0,
+                                                    ),
                                                   )
                                                 ],
                                                 borderRadius:
@@ -1275,6 +1291,8 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         13.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -1300,6 +1318,8 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .w500,
@@ -1387,6 +1407,8 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                           0xFF0F1113),
                                                                       fontSize:
                                                                           20.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .normal,
@@ -1420,6 +1442,8 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -1524,6 +1548,8 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                       0xFF827AE1),
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -1563,6 +1589,8 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                           0xFF0F1113),
                                                                       fontSize:
                                                                           20.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .normal,
@@ -1596,6 +1624,8 @@ class _BibliotecaWidgetState extends State<BibliotecaWidget>
                                                                         0xFF0F1113),
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,

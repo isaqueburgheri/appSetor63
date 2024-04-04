@@ -3,15 +3,9 @@ import 'zacarias13_widget.dart' show Zacarias13Widget;
 import 'package:flutter/material.dart';
 
 class Zacarias13Model extends FlutterFlowModel<Zacarias13Widget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

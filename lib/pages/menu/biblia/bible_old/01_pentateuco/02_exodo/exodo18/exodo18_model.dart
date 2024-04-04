@@ -3,15 +3,9 @@ import 'exodo18_widget.dart' show Exodo18Widget;
 import 'package:flutter/material.dart';
 
 class Exodo18Model extends FlutterFlowModel<Exodo18Widget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

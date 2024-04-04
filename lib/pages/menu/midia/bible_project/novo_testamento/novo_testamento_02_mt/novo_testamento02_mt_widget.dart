@@ -2,8 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_youtube_player.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 import 'novo_testamento02_mt_model.dart';
 export 'novo_testamento02_mt_model.dart';
 
@@ -35,17 +33,6 @@ class _NovoTestamento02MtWidgetState extends State<NovoTestamento02MtWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: Colors.white,
@@ -77,6 +64,7 @@ class _NovoTestamento02MtWidgetState extends State<NovoTestamento02MtWidget> {
                       fontFamily: 'Outfit',
                       color: const Color(0xFF0F1113),
                       fontSize: 24.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                     ),
               ),
@@ -106,7 +94,10 @@ class _NovoTestamento02MtWidgetState extends State<NovoTestamento02MtWidget> {
                 children: [
                   Text(
                     'Mateus 1-13 ',
-                    style: FlutterFlowTheme.of(context).headlineMedium,
+                    style: FlutterFlowTheme.of(context).headlineMedium.override(
+                          fontFamily: 'Outfit',
+                          letterSpacing: 0.0,
+                        ),
                   ),
                   Text(
                     'Assista o nosso vídeo com a visão geral do evangelho de Mateus dos capítulos 1 a 13, que explica o conceito literário do livro e as suas ideias principais. No evangelho de Mateus, Jesus traz o reino celestial de Deus à terra e convida os seus discípulos a viverem um novo estilo de vida através da sua morte e ressurreição.',
@@ -114,6 +105,7 @@ class _NovoTestamento02MtWidgetState extends State<NovoTestamento02MtWidget> {
                           fontFamily: 'Outfit',
                           color: const Color(0xFF57636C),
                           fontSize: 16.0,
+                          letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
                         ),
                   ),

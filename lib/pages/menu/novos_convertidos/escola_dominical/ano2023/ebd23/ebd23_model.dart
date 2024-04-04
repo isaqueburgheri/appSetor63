@@ -11,8 +11,6 @@ class Ebd23Model extends FlutterFlowModel<Ebd23Widget> {
   int get tabBarCurrentIndex =>
       tabBarController != null ? tabBarController!.index : 0;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -21,8 +19,4 @@ class Ebd23Model extends FlutterFlowModel<Ebd23Widget> {
     unfocusNode.dispose();
     tabBarController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

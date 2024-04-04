@@ -3,9 +3,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:provider/provider.dart';
 import 'midia_menu_model.dart';
 export 'midia_menu_model.dart';
 
@@ -59,17 +57,6 @@ class _MidiaMenuWidgetState extends State<MidiaMenuWidget>
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -96,7 +83,7 @@ class _MidiaMenuWidgetState extends State<MidiaMenuWidget>
                     size: 30.0,
                   ),
                   onPressed: () async {
-                    context.pop();
+                    context.pushNamed('main_0_menu');
                   },
                 ),
                 title: Text(
@@ -105,6 +92,7 @@ class _MidiaMenuWidgetState extends State<MidiaMenuWidget>
                         fontFamily: 'Outfit',
                         color: Colors.white,
                         fontSize: 22.0,
+                        letterSpacing: 0.0,
                       ),
                 ),
                 actions: const [],
@@ -183,6 +171,7 @@ class _MidiaMenuWidgetState extends State<MidiaMenuWidget>
                                             fontFamily: 'Plus Jakarta Sans',
                                             color: Colors.white,
                                             fontSize: 15.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w800,
                                           ),
                                     ),
@@ -201,6 +190,7 @@ class _MidiaMenuWidgetState extends State<MidiaMenuWidget>
                                             fontFamily: 'Plus Jakarta Sans',
                                             color: Colors.white,
                                             fontSize: 11.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w900,
                                           ),
                                     ),
@@ -258,6 +248,7 @@ class _MidiaMenuWidgetState extends State<MidiaMenuWidget>
                                             fontFamily: 'Plus Jakarta Sans',
                                             color: Colors.white,
                                             fontSize: 15.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w800,
                                           ),
                                     ),
@@ -276,6 +267,7 @@ class _MidiaMenuWidgetState extends State<MidiaMenuWidget>
                                             fontFamily: 'Plus Jakarta Sans',
                                             color: Colors.white,
                                             fontSize: 11.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w900,
                                           ),
                                     ),
@@ -333,6 +325,7 @@ class _MidiaMenuWidgetState extends State<MidiaMenuWidget>
                                             fontFamily: 'Plus Jakarta Sans',
                                             color: Colors.white,
                                             fontSize: 15.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w800,
                                           ),
                                     ),
@@ -351,6 +344,7 @@ class _MidiaMenuWidgetState extends State<MidiaMenuWidget>
                                             fontFamily: 'Plus Jakarta Sans',
                                             color: Colors.white,
                                             fontSize: 11.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w900,
                                           ),
                                     ),
@@ -408,6 +402,7 @@ class _MidiaMenuWidgetState extends State<MidiaMenuWidget>
                                             fontFamily: 'Plus Jakarta Sans',
                                             color: Colors.white,
                                             fontSize: 15.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w800,
                                           ),
                                     ),
@@ -426,6 +421,7 @@ class _MidiaMenuWidgetState extends State<MidiaMenuWidget>
                                             fontFamily: 'Plus Jakarta Sans',
                                             color: Colors.white,
                                             fontSize: 11.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w900,
                                           ),
                                     ),
@@ -483,6 +479,7 @@ class _MidiaMenuWidgetState extends State<MidiaMenuWidget>
                                             fontFamily: 'Plus Jakarta Sans',
                                             color: Colors.white,
                                             fontSize: 15.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w800,
                                           ),
                                     ),

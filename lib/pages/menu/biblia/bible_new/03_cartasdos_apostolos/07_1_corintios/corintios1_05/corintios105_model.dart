@@ -3,15 +3,9 @@ import 'corintios105_widget.dart' show Corintios105Widget;
 import 'package:flutter/material.dart';
 
 class Corintios105Model extends FlutterFlowModel<Corintios105Widget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

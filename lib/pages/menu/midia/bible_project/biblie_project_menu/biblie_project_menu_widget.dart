@@ -6,9 +6,7 @@ import '/flutter_flow/flutter_flow_video_player.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:provider/provider.dart';
 import 'biblie_project_menu_model.dart';
 export 'biblie_project_menu_model.dart';
 
@@ -65,17 +63,6 @@ class _BiblieProjectMenuWidgetState extends State<BiblieProjectMenuWidget>
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -102,7 +89,7 @@ class _BiblieProjectMenuWidgetState extends State<BiblieProjectMenuWidget>
                     size: 30.0,
                   ),
                   onPressed: () async {
-                    context.pop();
+                    context.pushNamed('midia_menu');
                   },
                 ),
                 title: Text(
@@ -111,6 +98,7 @@ class _BiblieProjectMenuWidgetState extends State<BiblieProjectMenuWidget>
                         fontFamily: 'Outfit',
                         color: Colors.white,
                         fontSize: 22.0,
+                        letterSpacing: 0.0,
                       ),
                 ),
                 actions: const [],
@@ -179,6 +167,7 @@ class _BiblieProjectMenuWidgetState extends State<BiblieProjectMenuWidget>
                                                         fontFamily: 'Outfit',
                                                         color: Colors.white,
                                                         fontSize: 12.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
                                                       ),
@@ -197,6 +186,7 @@ class _BiblieProjectMenuWidgetState extends State<BiblieProjectMenuWidget>
                                                         fontFamily: 'Outfit',
                                                         color: Colors.white,
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
                                                       ),
@@ -215,6 +205,7 @@ class _BiblieProjectMenuWidgetState extends State<BiblieProjectMenuWidget>
                                                         fontFamily: 'Outfit',
                                                         color: Colors.white,
                                                         fontSize: 12.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
                                                       ),
@@ -247,8 +238,10 @@ class _BiblieProjectMenuWidgetState extends State<BiblieProjectMenuWidget>
                                                           blurRadius: 3.0,
                                                           color:
                                                               Color(0x33000000),
-                                                          offset:
-                                                              Offset(0.0, 1.0),
+                                                          offset: Offset(
+                                                            0.0,
+                                                            1.0,
+                                                          ),
                                                         )
                                                       ],
                                                       borderRadius:
@@ -277,6 +270,8 @@ class _BiblieProjectMenuWidgetState extends State<BiblieProjectMenuWidget>
                                                                       0xFF57636C),
                                                                   fontSize:
                                                                       14.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -322,8 +317,10 @@ class _BiblieProjectMenuWidgetState extends State<BiblieProjectMenuWidget>
                                                           blurRadius: 3.0,
                                                           color:
                                                               Color(0x33000000),
-                                                          offset:
-                                                              Offset(0.0, 1.0),
+                                                          offset: Offset(
+                                                            0.0,
+                                                            1.0,
+                                                          ),
                                                         )
                                                       ],
                                                       borderRadius:
@@ -352,6 +349,8 @@ class _BiblieProjectMenuWidgetState extends State<BiblieProjectMenuWidget>
                                                                       0xFF57636C),
                                                                   fontSize:
                                                                       14.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -424,6 +423,8 @@ class _BiblieProjectMenuWidgetState extends State<BiblieProjectMenuWidget>
                                                               color:
                                                                   Colors.white,
                                                               fontSize: 22.0,
+                                                              letterSpacing:
+                                                                  0.0,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold,
@@ -461,6 +462,8 @@ class _BiblieProjectMenuWidgetState extends State<BiblieProjectMenuWidget>
                                                                 color: Colors
                                                                     .black,
                                                                 fontSize: 14.0,
+                                                                letterSpacing:
+                                                                    0.0,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w500,
@@ -493,6 +496,8 @@ class _BiblieProjectMenuWidgetState extends State<BiblieProjectMenuWidget>
                                                                       .white,
                                                                   fontSize:
                                                                       14.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,

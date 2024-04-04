@@ -2,8 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_youtube_player.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 import 'velho_test31_jl_model.dart';
 export 'velho_test31_jl_model.dart';
 
@@ -34,17 +32,6 @@ class _VelhoTest31JlWidgetState extends State<VelhoTest31JlWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: Colors.white,
@@ -76,6 +63,7 @@ class _VelhoTest31JlWidgetState extends State<VelhoTest31JlWidget> {
                       fontFamily: 'Outfit',
                       color: const Color(0xFF0F1113),
                       fontSize: 24.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                     ),
               ),
@@ -113,17 +101,19 @@ class _VelhoTest31JlWidgetState extends State<VelhoTest31JlWidget> {
                                 fontFamily: 'Outfit',
                                 color: const Color(0xFF0F1113),
                                 fontSize: 24.0,
+                                letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
                               ),
                     ),
                   ),
                   Text(
-                    'Assista o nosso vídeo com a visão geral de Joel que explica o conceito literário do livro e as suas ideias principais. Joel reflete no "Dia do Senhor" e como o verdadeiro arrependimento trará a grande restauração esperada nos outros livros proféticos.',
+                    'Assista o nosso vídeo com a visão geral de Joel que explica o conceito literário do livro e as suas ideias principais. Joel reflete no \"Dia do Senhor\" e como o verdadeiro arrependimento trará a grande restauração esperada nos outros livros proféticos.',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily: 'Outfit',
                           color: const Color(0xFF57636C),
                           fontSize: 16.0,
+                          letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
                         ),
                   ),

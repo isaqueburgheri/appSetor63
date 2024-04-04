@@ -7,8 +7,6 @@ class Menu162TimoteoModel extends FlutterFlowModel<Menu162TimoteoWidget> {
 
   final unfocusNode = FocusNode();
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -16,8 +14,4 @@ class Menu162TimoteoModel extends FlutterFlowModel<Menu162TimoteoWidget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

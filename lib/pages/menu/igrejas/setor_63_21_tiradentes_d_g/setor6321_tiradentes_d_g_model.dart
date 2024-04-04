@@ -11,8 +11,6 @@ class Setor6321TiradentesDGModel
   // State field(s) for Expandable widget.
   late ExpandableController expandableController;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -21,8 +19,4 @@ class Setor6321TiradentesDGModel
     unfocusNode.dispose();
     expandableController.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

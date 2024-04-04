@@ -7,8 +7,6 @@ class Menu24Joao2Model extends FlutterFlowModel<Menu24Joao2Widget> {
 
   final unfocusNode = FocusNode();
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -16,8 +14,4 @@ class Menu24Joao2Model extends FlutterFlowModel<Menu24Joao2Widget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

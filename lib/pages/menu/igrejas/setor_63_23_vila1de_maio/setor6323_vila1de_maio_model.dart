@@ -11,8 +11,6 @@ class Setor6323Vila1deMaioModel
   // State field(s) for Expandable widget.
   late ExpandableController expandableController;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -21,8 +19,4 @@ class Setor6323Vila1deMaioModel
     unfocusNode.dispose();
     expandableController.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

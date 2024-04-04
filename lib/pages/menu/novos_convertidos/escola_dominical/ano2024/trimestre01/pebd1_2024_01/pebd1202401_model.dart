@@ -7,8 +7,6 @@ class Pebd1202401Model extends FlutterFlowModel<Pebd1202401Widget> {
 
   final unfocusNode = FocusNode();
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -16,8 +14,4 @@ class Pebd1202401Model extends FlutterFlowModel<Pebd1202401Widget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

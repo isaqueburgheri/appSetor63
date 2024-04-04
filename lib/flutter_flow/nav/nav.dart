@@ -82,11 +82,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : const Main0MenuWidget(),
         ),
         FFRoute(
-          name: 'menu_radio_01_rbc',
-          path: '/menuRadio01Rbc',
-          builder: (context, params) => const MenuRadio01RbcWidget(),
-        ),
-        FFRoute(
           name: 'menu_biblia',
           path: '/menuBiblia',
           builder: (context, params) => const MenuBibliaWidget(),
@@ -105,16 +100,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'menu_sugestoes',
           path: '/menuSugestoes',
           builder: (context, params) => const MenuSugestoesWidget(),
-        ),
-        FFRoute(
-          name: 'menu_radio',
-          path: '/menuRadio',
-          builder: (context, params) => const MenuRadioWidget(),
-        ),
-        FFRoute(
-          name: 'menu_radio_02_senami',
-          path: '/menuRadio02Senami',
-          builder: (context, params) => const MenuRadio02SenamiWidget(),
         ),
         FFRoute(
           name: 'Setor_63_06_CityConceicao',
@@ -570,11 +555,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'velhoTest_41_Ml',
           path: '/velhoTest41Ml',
           builder: (context, params) => const VelhoTest41MlWidget(),
-        ),
-        FFRoute(
-          name: 'Agenda_2023',
-          path: '/agenda2023',
-          builder: (context, params) => const Agenda2023Widget(),
         ),
         FFRoute(
           name: 'biblioteca',
@@ -3072,9 +3052,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const Joh01Widget(),
         ),
         FFRoute(
-          name: 'salmos01',
-          path: '/salmos01',
-          builder: (context, params) => const Salmos01Widget(),
+          name: 'salmos_001',
+          path: '/salmos001',
+          builder: (context, params) => const Salmos001Widget(),
         ),
         FFRoute(
           name: 'prov01',
@@ -6430,6 +6410,761 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'issuureader',
           path: '/issuureader',
           builder: (context, params) => const IssuureaderWidget(),
+        ),
+        FFRoute(
+          name: 'salmos_098',
+          path: '/salmos098',
+          builder: (context, params) => const Salmos098Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_088',
+          path: '/salmos088',
+          builder: (context, params) => const Salmos088Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_077',
+          path: '/salmos077',
+          builder: (context, params) => const Salmos077Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_069',
+          path: '/salmos069',
+          builder: (context, params) => const Salmos069Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_048',
+          path: '/salmos048',
+          builder: (context, params) => const Salmos048Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_054',
+          path: '/salmos054',
+          builder: (context, params) => const Salmos054Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_032',
+          path: '/salmos032',
+          builder: (context, params) => const Salmos032Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_022',
+          path: '/salmos022',
+          builder: (context, params) => const Salmos022Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_011',
+          path: '/salmos011',
+          builder: (context, params) => const Salmos011Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_005',
+          path: '/salmos005',
+          builder: (context, params) => const Salmos005Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_097',
+          path: '/salmos097',
+          builder: (context, params) => const Salmos097Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_096',
+          path: '/salmos096',
+          builder: (context, params) => const Salmos096Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_095',
+          path: '/salmos095',
+          builder: (context, params) => const Salmos095Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_094',
+          path: '/salmos094',
+          builder: (context, params) => const Salmos094Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_093',
+          path: '/salmos093',
+          builder: (context, params) => const Salmos093Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_092',
+          path: '/salmos092',
+          builder: (context, params) => const Salmos092Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_091',
+          path: '/salmos091',
+          builder: (context, params) => const Salmos091Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_090',
+          path: '/salmos090',
+          builder: (context, params) => const Salmos090Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_089',
+          path: '/salmos089',
+          builder: (context, params) => const Salmos089Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_087',
+          path: '/salmos087',
+          builder: (context, params) => const Salmos087Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_086',
+          path: '/salmos086',
+          builder: (context, params) => const Salmos086Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_085',
+          path: '/salmos085',
+          builder: (context, params) => const Salmos085Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_084',
+          path: '/salmos084',
+          builder: (context, params) => const Salmos084Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_083',
+          path: '/salmos083',
+          builder: (context, params) => const Salmos083Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_082',
+          path: '/salmos082',
+          builder: (context, params) => const Salmos082Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_081',
+          path: '/salmos081',
+          builder: (context, params) => const Salmos081Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_080',
+          path: '/salmos080',
+          builder: (context, params) => const Salmos080Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_079',
+          path: '/salmos079',
+          builder: (context, params) => const Salmos079Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_004',
+          path: '/salmos004',
+          builder: (context, params) => const Salmos004Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_078',
+          path: '/salmos078',
+          builder: (context, params) => const Salmos078Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_003',
+          path: '/salmos003',
+          builder: (context, params) => const Salmos003Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_071',
+          path: '/salmos071',
+          builder: (context, params) => const Salmos071Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_072',
+          path: '/salmos072',
+          builder: (context, params) => const Salmos072Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_073',
+          path: '/salmos073',
+          builder: (context, params) => const Salmos073Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_074',
+          path: '/salmos074',
+          builder: (context, params) => const Salmos074Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_075',
+          path: '/salmos075',
+          builder: (context, params) => const Salmos075Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_070',
+          path: '/salmos070',
+          builder: (context, params) => const Salmos070Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_066',
+          path: '/salmos066',
+          builder: (context, params) => const Salmos066Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_067',
+          path: '/salmos067',
+          builder: (context, params) => const Salmos067Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_068',
+          path: '/salmos068',
+          builder: (context, params) => const Salmos068Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_076',
+          path: '/salmos076',
+          builder: (context, params) => const Salmos076Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_065',
+          path: '/salmos065',
+          builder: (context, params) => const Salmos065Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_064',
+          path: '/salmos064',
+          builder: (context, params) => const Salmos064Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_063',
+          path: '/salmos063',
+          builder: (context, params) => const Salmos063Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_062',
+          path: '/salmos062',
+          builder: (context, params) => const Salmos062Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_061',
+          path: '/salmos061',
+          builder: (context, params) => const Salmos061Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_060',
+          path: '/salmos060',
+          builder: (context, params) => const Salmos060Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_059',
+          path: '/salmos059',
+          builder: (context, params) => const Salmos059Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_058',
+          path: '/salmos058',
+          builder: (context, params) => const Salmos058Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_056',
+          path: '/salmos056',
+          builder: (context, params) => const Salmos056Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_049',
+          path: '/salmos049',
+          builder: (context, params) => const Salmos049Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_050',
+          path: '/salmos050',
+          builder: (context, params) => const Salmos050Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_043',
+          path: '/salmos043',
+          builder: (context, params) => const Salmos043Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_044',
+          path: '/salmos044',
+          builder: (context, params) => const Salmos044Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_045',
+          path: '/salmos045',
+          builder: (context, params) => const Salmos045Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_046',
+          path: '/salmos046',
+          builder: (context, params) => const Salmos046Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_047',
+          path: '/salmos047',
+          builder: (context, params) => const Salmos047Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_051',
+          path: '/salmos051',
+          builder: (context, params) => const Salmos051Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_052',
+          path: '/salmos052',
+          builder: (context, params) => const Salmos052Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_053',
+          path: '/salmos053',
+          builder: (context, params) => const Salmos053Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_042',
+          path: '/salmos042',
+          builder: (context, params) => const Salmos042Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_041',
+          path: '/salmos041',
+          builder: (context, params) => const Salmos041Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_040',
+          path: '/salmos040',
+          builder: (context, params) => const Salmos040Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_039',
+          path: '/salmos039',
+          builder: (context, params) => const Salmos039Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_038',
+          path: '/salmos038',
+          builder: (context, params) => const Salmos038Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_037',
+          path: '/salmos037',
+          builder: (context, params) => const Salmos037Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_036',
+          path: '/salmos036',
+          builder: (context, params) => const Salmos036Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_035',
+          path: '/salmos035',
+          builder: (context, params) => const Salmos035Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_034',
+          path: '/salmos034',
+          builder: (context, params) => const Salmos034Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_033',
+          path: '/salmos033',
+          builder: (context, params) => const Salmos033Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_031',
+          path: '/salmos031',
+          builder: (context, params) => const Salmos031Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_030',
+          path: '/salmos030',
+          builder: (context, params) => const Salmos030Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_029',
+          path: '/salmos029',
+          builder: (context, params) => const Salmos029Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_099',
+          path: '/salmos099',
+          builder: (context, params) => const Salmos099Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_028',
+          path: '/salmos028',
+          builder: (context, params) => const Salmos028Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_027',
+          path: '/salmos027',
+          builder: (context, params) => const Salmos027Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_026',
+          path: '/salmos026',
+          builder: (context, params) => const Salmos026Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_025',
+          path: '/salmos025',
+          builder: (context, params) => const Salmos025Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_024',
+          path: '/salmos024',
+          builder: (context, params) => const Salmos024Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_023',
+          path: '/salmos023',
+          builder: (context, params) => const Salmos023Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_021',
+          path: '/salmos021',
+          builder: (context, params) => const Salmos021Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_020',
+          path: '/salmos020',
+          builder: (context, params) => const Salmos020Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_019',
+          path: '/salmos019',
+          builder: (context, params) => const Salmos019Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_018',
+          path: '/salmos018',
+          builder: (context, params) => const Salmos018Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_017',
+          path: '/salmos017',
+          builder: (context, params) => const Salmos017Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_016',
+          path: '/salmos016',
+          builder: (context, params) => const Salmos016Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_015',
+          path: '/salmos015',
+          builder: (context, params) => const Salmos015Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_014',
+          path: '/salmos014',
+          builder: (context, params) => const Salmos014Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_013',
+          path: '/salmos013',
+          builder: (context, params) => const Salmos013Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_012',
+          path: '/salmos012',
+          builder: (context, params) => const Salmos012Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_010',
+          path: '/salmos010',
+          builder: (context, params) => const Salmos010Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_009',
+          path: '/salmos009',
+          builder: (context, params) => const Salmos009Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_008',
+          path: '/salmos008',
+          builder: (context, params) => const Salmos008Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_007',
+          path: '/salmos007',
+          builder: (context, params) => const Salmos007Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_006',
+          path: '/salmos006',
+          builder: (context, params) => const Salmos006Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_002',
+          path: '/salmos002',
+          builder: (context, params) => const Salmos002Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_100',
+          path: '/salmos100',
+          builder: (context, params) => const Salmos100Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_101',
+          path: '/salmos101',
+          builder: (context, params) => const Salmos101Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_112',
+          path: '/salmos112',
+          builder: (context, params) => const Salmos112Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_122',
+          path: '/salmos122',
+          builder: (context, params) => const Salmos122Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_123',
+          path: '/salmos123',
+          builder: (context, params) => const Salmos123Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_124',
+          path: '/salmos124',
+          builder: (context, params) => const Salmos124Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_125',
+          path: '/salmos125',
+          builder: (context, params) => const Salmos125Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_126',
+          path: '/salmos126',
+          builder: (context, params) => const Salmos126Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_128',
+          path: '/salmos128',
+          builder: (context, params) => const Salmos128Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_129',
+          path: '/salmos129',
+          builder: (context, params) => const Salmos129Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_102',
+          path: '/salmos102',
+          builder: (context, params) => const Salmos102Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_103',
+          path: '/salmos103',
+          builder: (context, params) => const Salmos103Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_130',
+          path: '/salmos130',
+          builder: (context, params) => const Salmos130Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_104',
+          path: '/salmos104',
+          builder: (context, params) => const Salmos104Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_105',
+          path: '/salmos105',
+          builder: (context, params) => const Salmos105Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_106',
+          path: '/salmos106',
+          builder: (context, params) => const Salmos106Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_107',
+          path: '/salmos107',
+          builder: (context, params) => const Salmos107Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_108',
+          path: '/salmos108',
+          builder: (context, params) => const Salmos108Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_109',
+          path: '/salmos109',
+          builder: (context, params) => const Salmos109Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_110',
+          path: '/salmos110',
+          builder: (context, params) => const Salmos110Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_111',
+          path: '/salmos111',
+          builder: (context, params) => const Salmos111Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_113',
+          path: '/salmos113',
+          builder: (context, params) => const Salmos113Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_114',
+          path: '/salmos114',
+          builder: (context, params) => const Salmos114Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_115',
+          path: '/salmos115',
+          builder: (context, params) => const Salmos115Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_116',
+          path: '/salmos116',
+          builder: (context, params) => const Salmos116Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_117',
+          path: '/salmos117',
+          builder: (context, params) => const Salmos117Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_118',
+          path: '/salmos118',
+          builder: (context, params) => const Salmos118Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_119',
+          path: '/salmos119',
+          builder: (context, params) => const Salmos119Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_120',
+          path: '/salmos120',
+          builder: (context, params) => const Salmos120Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_121',
+          path: '/salmos121',
+          builder: (context, params) => const Salmos121Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_127',
+          path: '/salmos127',
+          builder: (context, params) => const Salmos127Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_131',
+          path: '/salmos131',
+          builder: (context, params) => const Salmos131Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_142',
+          path: '/salmos142',
+          builder: (context, params) => const Salmos142Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_144',
+          path: '/salmos144',
+          builder: (context, params) => const Salmos144Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_145',
+          path: '/salmos145',
+          builder: (context, params) => const Salmos145Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_146',
+          path: '/salmos146',
+          builder: (context, params) => const Salmos146Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_147',
+          path: '/salmos147',
+          builder: (context, params) => const Salmos147Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_148',
+          path: '/salmos148',
+          builder: (context, params) => const Salmos148Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_149',
+          path: '/salmos149',
+          builder: (context, params) => const Salmos149Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_150',
+          path: '/salmos150',
+          builder: (context, params) => const Salmos150Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_132',
+          path: '/salmos132',
+          builder: (context, params) => const Salmos132Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_133',
+          path: '/salmos133',
+          builder: (context, params) => const Salmos133Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_134',
+          path: '/salmos134',
+          builder: (context, params) => const Salmos134Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_135',
+          path: '/salmos135',
+          builder: (context, params) => const Salmos135Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_136',
+          path: '/salmos136',
+          builder: (context, params) => const Salmos136Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_137',
+          path: '/salmos137',
+          builder: (context, params) => const Salmos137Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_138',
+          path: '/salmos138',
+          builder: (context, params) => const Salmos138Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_139',
+          path: '/salmos139',
+          builder: (context, params) => const Salmos139Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_140',
+          path: '/salmos140',
+          builder: (context, params) => const Salmos140Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_141',
+          path: '/salmos141',
+          builder: (context, params) => const Salmos141Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_143',
+          path: '/salmos143',
+          builder: (context, params) => const Salmos143Widget(),
+        ),
+        FFRoute(
+          name: 'Agenda_2024',
+          path: '/agenda2024',
+          builder: (context, params) => const Agenda2024Widget(),
+        ),
+        FFRoute(
+          name: 'Agenda_2023',
+          path: '/agenda2023',
+          builder: (context, params) => const Agenda2023Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_055',
+          path: '/salmos055',
+          builder: (context, params) => const Salmos055Widget(),
+        ),
+        FFRoute(
+          name: 'salmos_057',
+          path: '/salmos057',
+          builder: (context, params) => const Salmos057Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
@@ -6544,6 +7279,7 @@ class FFRoute {
         name: name,
         path: path,
         pageBuilder: (context, state) {
+          fixStatusBarOniOS16AndBelow(context);
           final ffParams = FFParameters(state, asyncParams);
           final page = ffParams.hasFutures
               ? FutureBuilder(

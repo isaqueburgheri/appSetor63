@@ -6,10 +6,8 @@ import '/custom_code/actions/index.dart' as actions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:provider/provider.dart';
 import 'main0_menu_model.dart';
 export 'main0_menu_model.dart';
 
@@ -68,17 +66,6 @@ class _Main0MenuWidgetState extends State<Main0MenuWidget>
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -86,30 +73,6 @@ class _Main0MenuWidgetState extends State<Main0MenuWidget>
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: const Color(0xFF001775),
-        appBar: responsiveVisibility(
-          context: context,
-          tabletLandscape: false,
-          desktop: false,
-        )
-            ? AppBar(
-                backgroundColor: Colors.black,
-                automaticallyImplyLeading: false,
-                title: Align(
-                  alignment: const AlignmentDirectional(0.0, -1.0),
-                  child: Text(
-                    ' AD Belém - Setor 63',
-                    style: FlutterFlowTheme.of(context).headlineMedium.override(
-                          fontFamily: 'Outfit',
-                          color: Colors.white,
-                          fontSize: 22.0,
-                        ),
-                  ),
-                ),
-                actions: const [],
-                centerTitle: false,
-                elevation: 2.0,
-              )
-            : null,
         body: SafeArea(
           top: true,
           child: Visibility(
@@ -211,6 +174,7 @@ class _Main0MenuWidgetState extends State<Main0MenuWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color: Colors.white,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -260,8 +224,7 @@ class _Main0MenuWidgetState extends State<Main0MenuWidget>
                                               size: 60.0,
                                             ),
                                             onPressed: () async {
-                                              context.pushNamed(
-                                                  'Agenda_Menu_Geral');
+                                              context.pushNamed('Agenda_2024');
                                             },
                                           ),
                                         ),
@@ -281,6 +244,7 @@ class _Main0MenuWidgetState extends State<Main0MenuWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color: Colors.white,
+                                                        letterSpacing: 0.0,
                                                       ),
                                             ),
                                           ),
@@ -349,6 +313,7 @@ class _Main0MenuWidgetState extends State<Main0MenuWidget>
                                                             'Plus Jakarta Sans',
                                                         color: Colors.white,
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
                                                       ),
@@ -418,75 +383,7 @@ class _Main0MenuWidgetState extends State<Main0MenuWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color: Colors.white,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              width: 8.0,
-                              height: 8.0,
-                              decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                              ),
-                              child: Stack(
-                                children: [
-                                  Container(
-                                    width: 183.0,
-                                    height: 183.0,
-                                    decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Stack(
-                                      children: [
-                                        Align(
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
-                                          child: FlutterFlowIconButton(
-                                            borderColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .background,
-                                            borderRadius: 30.0,
-                                            borderWidth: 2.0,
-                                            buttonSize: 80.0,
-                                            fillColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .primaryBackground,
-                                            icon: Icon(
-                                              Icons.radio,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              size: 60.0,
-                                            ),
-                                            onPressed: () async {
-                                              context.pushNamed('menu_radio');
-                                            },
-                                          ),
-                                        ),
-                                        Align(
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 1.0),
-                                          child: Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 30.0),
-                                            child: Text(
-                                              'Rádio',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Plus Jakarta Sans',
-                                                        color: Colors.white,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -556,6 +453,7 @@ class _Main0MenuWidgetState extends State<Main0MenuWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color: Colors.white,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -626,6 +524,7 @@ class _Main0MenuWidgetState extends State<Main0MenuWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color: Colors.white,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -695,6 +594,7 @@ class _Main0MenuWidgetState extends State<Main0MenuWidget>
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color: Colors.white,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -767,6 +667,7 @@ class _Main0MenuWidgetState extends State<Main0MenuWidget>
                                                             'Plus Jakarta Sans',
                                                         color: Colors.white,
                                                         fontSize: 14.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -838,6 +739,7 @@ class _Main0MenuWidgetState extends State<Main0MenuWidget>
                                                             'Plus Jakarta Sans',
                                                         color: Colors.white,
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -910,6 +812,7 @@ class _Main0MenuWidgetState extends State<Main0MenuWidget>
                                                             'Plus Jakarta Sans',
                                                         color: Colors.white,
                                                         fontSize: 14.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -982,6 +885,7 @@ class _Main0MenuWidgetState extends State<Main0MenuWidget>
                                                             'Plus Jakarta Sans',
                                                         color: Colors.white,
                                                         fontSize: 14.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -1054,77 +958,7 @@ class _Main0MenuWidgetState extends State<Main0MenuWidget>
                                                             'Plus Jakarta Sans',
                                                         color: Colors.white,
                                                         fontSize: 14.0,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              width: 8.0,
-                              height: 8.0,
-                              decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                              ),
-                              child: Stack(
-                                children: [
-                                  Container(
-                                    width: 183.0,
-                                    height: 183.0,
-                                    decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Stack(
-                                      children: [
-                                        Align(
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
-                                          child: FlutterFlowIconButton(
-                                            borderColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .background,
-                                            borderRadius: 30.0,
-                                            borderWidth: 2.0,
-                                            buttonSize: 80.0,
-                                            fillColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .primaryBackground,
-                                            icon: FaIcon(
-                                              FontAwesomeIcons.newspaper,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              size: 50.0,
-                                            ),
-                                            onPressed: () async {
-                                              context.pushNamed('issuureader');
-                                            },
-                                          ),
-                                        ),
-                                        Align(
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 1.0),
-                                          child: Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 15.0),
-                                            child: Text(
-                                              'Informativo AD Belém',
-                                              textAlign: TextAlign.center,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Plus Jakarta Sans',
-                                                        color: Colors.white,
-                                                        fontSize: 14.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),

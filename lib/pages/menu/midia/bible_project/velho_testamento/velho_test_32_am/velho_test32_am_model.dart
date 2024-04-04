@@ -3,15 +3,9 @@ import 'velho_test32_am_widget.dart' show VelhoTest32AmWidget;
 import 'package:flutter/material.dart';
 
 class VelhoTest32AmModel extends FlutterFlowModel<VelhoTest32AmWidget> {
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

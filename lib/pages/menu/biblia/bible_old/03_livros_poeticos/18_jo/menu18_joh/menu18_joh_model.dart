@@ -7,8 +7,6 @@ class Menu18JohModel extends FlutterFlowModel<Menu18JohWidget> {
 
   final unfocusNode = FocusNode();
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -16,8 +14,4 @@ class Menu18JohModel extends FlutterFlowModel<Menu18JohWidget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }
